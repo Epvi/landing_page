@@ -1,9 +1,9 @@
-.container {
+/* .container {
   display: flex;
   justify-content: center;
-}
+} */
 
-.header {
+.navContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,32 +17,32 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.content {
+.navContent {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 0px;
-  gap: 233px;
+  gap: 200px;
   /* width: 1440px; */
-  width: 1640px;
+  width: 100%;
   height: 48px;
 }
 
 .logoBlock {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-start; */
   padding: 0px;
   gap: 10px;
   width: 95.05px;
   height: 32px;
-  flex: none;
+  /* flex: none;
   order: 0;
-  flex-grow: 0;
+  flex-grow: 0; */
 }
 
-.links {
+.navLinks {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -58,13 +58,14 @@
   flex-grow: 0;
 }
 
-.links > a {
+.navLinks > a {
   font-family: Montserrat;
+  font-weight: 500;
   color: #404040;
   text-decoration: none;
 }
 
-.actions {
+.navActions {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -81,10 +82,10 @@
 }
 
 #btn1 {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   padding: 10px 16px;
   gap: 6px;
 
@@ -98,6 +99,7 @@
   line-height: 20px;
 
   background: #eef2ff;
+  color: #377bff;
   border-radius: 50px;
   border: none;
 
@@ -107,10 +109,10 @@
 }
 
 #btn2 {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   padding: 10px 16px;
   gap: 6px;
 
