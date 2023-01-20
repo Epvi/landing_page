@@ -26,15 +26,8 @@
   padding: 0px;
   gap: 40px;
 
-  /* width: 634px; */
   width: 670px;
   height: 284px;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 }
 
 .getSmifi_contentText {
@@ -45,8 +38,6 @@
   padding: 0px;
   gap: 40px;
 
-  /* width: 634px;
-  width: 100%; */
   height: 284px;
 
   /* Inside auto layout */
@@ -351,12 +342,11 @@
   flex-direction: column;
   align-items: center;
   padding: 0px;
-  gap: 20px; /*have to change this*/
+  gap: 20px;
 
   width: 957px;
   height: 171px;
   left: 254px;
-  /* top: 1258px; */
 }
 
 .superpower_text .superpower_strong {
@@ -368,17 +358,10 @@
   font-weight: 800;
   font-size: 48px;
   line-height: 58px;
-  /* identical to box height, or 121% */
 
   text-align: center;
 
   color: #162637;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 }
 
 .superpower_text .superpower_light {
@@ -390,17 +373,15 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 31px;
-  /* or 155% */
 
   text-align: center;
 
   color: #333333;
+}
 
-  /* Inside auto layout */
-
-  flex: none;
-  order: 1;
-  flex-grow: 0;
+.superpower_smifi_image {
+  margin: auto;
+  margin-top: 65px;
 }
 
 /* ====================== Benefits ============================ */

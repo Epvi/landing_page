@@ -173,6 +173,14 @@ function HelperTextSuperpower() {
             />
           </div>
         </div>
+        <div className={styles.superpower_smifi_image}>
+          <Image
+            src="/Smi-Fi_box_front_1.png"
+            alt="Smifi device Image"
+            width="455"
+            height="435"
+          />
+        </div>
       </div>
     </>
   );
