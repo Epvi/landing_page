@@ -8,10 +8,64 @@ export default function Home() {
     <>
       <div className={styles.main}>
         <GetSmifi />
+        <Features />
       </div>
     </>
   );
 }
+
+// features
+function Features() {
+  return (
+    <>
+      <div className={styles.features_container}>
+        <div className={styles.features_frame1}>
+          <div className={styles.features_frame1_img}>
+            <Image
+              src="/features_frame1.png"
+              width="262"
+              height="210"
+              alt="feature image 1"
+            />
+          </div>
+          <div className={styles.features_frame1_Text}>
+            <span>Track real-time</span> <br />
+            electricity usage.
+          </div>
+        </div>
+        <div className={styles.features_frame2}>
+          <div className={styles.features_frame2_img}>
+            <Image
+              src="/features_frame2.png"
+              width="204"
+              height="210"
+              alt="feature image 2"
+            />
+          </div>
+          <div className={styles.features_frame2_Text}>
+            <span>Control your</span> <br />
+            appliances remotely.
+          </div>
+        </div>
+        <div className={styles.features_frame3}>
+          <div className={styles.features_frame3_img}>
+            <Image
+              src="/features_frame3.png"
+              width="230"
+              height="210"
+              alt="feature image 3"
+            />
+          </div>
+          <div className={styles.features_frame3_Text}>
+            <span>Secure from </span> <br />
+            electric risks.
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
 // getSmifi
 function GetSmifi() {
   return (
@@ -39,13 +93,15 @@ function GetSmifi() {
               <FontAwesomeIcon icon={faArrowRight} />
             </button>
             <div className={styles.getSmifi_rating}>
-                <Image
-                  width="120"
-                  height="24"
-                  src="/Rating.png"
-                  alt="rating-img"
-                />
-              <div className={styles.getSmifi_ratingText}>From 100+ reviews</div>
+              <Image
+                width="120"
+                height="24"
+                src="/Rating.png"
+                alt="rating-img"
+              />
+              <div className={styles.getSmifi_ratingText}>
+                From 100+ reviews
+              </div>
             </div>
           </div>
         </div>
