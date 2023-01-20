@@ -334,7 +334,7 @@
 }
 
 /* ========================= Helper text SuperPower ===============================*/
-.superpowerContainer {
+.superpower_container {
   display: flex;
   flex-direction: column;
   margin-top: 150px;
@@ -401,4 +401,174 @@
   flex: none;
   order: 1;
   flex-grow: 0;
+}
+
+/* ====================== Benefits ============================ */
+
+.benefits_container {
+  margin-top: 150px;
+  height: 2173px;
+}
+
+.benefits_frame_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* width: 100%; */
+  height: 691px;
+
+  margin-bottom: 50px;
+  padding-left: 112px;
+  background: #ffffff;
+}
+
+.benefits_content_btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0px;
+  margin-top: 124px;
+  /* margin-left: 112px; */
+  margin-bottom: 279px;
+}
+
+.benefits_content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 24px;
+
+  width: 156%;
+  height: 247px;
+}
+
+.benefits_helperText_1 {
+  width: 608px;
+  height: 20px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: #377bff;
+}
+
+.benefits_helperText_2 {
+  width: 379px;
+  height: 112px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 52px;
+  line-height: 56px;
+  /* or 108% */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.02em;
+
+  color: #171717;
+}
+
+.benefits_helperText_2 > p > span {
+  background: -webkit-linear-gradient(
+    0deg,
+    #2ca2b4 32.41%,
+    #5598de 39.42%,
+    #7f87ff 45.9%,
+    #f65aad 51.83%,
+    rgba(236, 61, 67, 0.954327) 58.3%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.benefits_helperText_1_3 {
+  width: 488px;
+  height: 56px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  /* or 156% */
+
+  display: flex;
+  align-items: center;
+
+  color: #404040;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.benefits_btn_box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+
+  width: 260px;
+  height: 48px;
+  margin-top: 103px;
+}
+
+.benefits_btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 12px 20px;
+  gap: 8px;
+
+  width: 260px;
+  height: 48px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+
+  background: #377bff;
+  color: white;
+  border-radius: 50px;
+  border: none;
+}
+
+.benefits_img {
+  width: 720px;
+  height: 691px;
+  left: 720px;
+  top: 0px;
+
+  border-radius: 50px 0px 0px 50px;
+}
+
+.benefits_content_btn_diff {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+
+  width: 608px;
+  height: 412px;
+
+  margin-top: 124px;
+  margin-bottom: 279px;
 }

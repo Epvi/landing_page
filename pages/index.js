@@ -10,17 +10,141 @@ export default function Home() {
         <GetSmifi />
         <Features />
         <HelperTextSuperpower />
+        <Benefits />
+      </div>
+    </>
+  );
+}
+
+function Benefits() {
+  return (
+    <>
+      <div className={styles.benefits_container}>
+        {/* ---------------- 1 --------------------- */}
+        <div className={styles.benefits_frame_content}>
+          <div className={styles.benefits_content_btn}>
+            <div className={styles.benefits_content}>
+              <div className={styles.benefits_helperText_1}>AUTOMATION</div>
+              <div className={styles.benefits_helperText_2}>
+                <p>
+                  Upgrade your <span>home.</span>
+                </p>
+              </div>
+              <div className={styles.benefits_helperText_1_3}>
+                Smi-Fi can connects with multiple appliances and convert them
+                into smart appliances.
+              </div>
+            </div>
+            <div className={styles.benefits_btn_box}>
+              <button className={styles.benefits_btn}>
+                See the Magic of Smi-Fi
+                <FontAwesomeIcon icon={faArrowRight} />
+              </button>
+            </div>
+          </div>
+          <div className={styles.benefits_img}>
+            <Image
+              src="/benefits_frame_1.png"
+              alt="benefits_frame_1 image"
+              width="720"
+              height="691"
+            />
+          </div>
+        </div>
+        {/* 2 */}
+        <div className={styles.benefits_frame_content}>
+          <div className={styles.benefits_content_btn_diff}>
+            <div className={styles.benefits_content_diff}>
+              <div
+                className={styles.benefits_helperText_1}
+                style={{ marginBottom: "20px" }}
+              >
+                AUTOMATION
+              </div>
+              <div
+                className={styles.benefits_helperText_2}
+                style={{ marginBottom: "25px" }}
+              >
+                <p>
+                  Upgrade your <span>lifestyle.</span>
+                </p>
+              </div>
+              <div
+                className={styles.benefits_helperText_1_3}
+                style={{ marginBottom: "25px" }}
+              >
+                Use voice command or mobile phone to turn ON/OFF all your
+                appliances from anywhere anytime. Schedule timer for appliances.
+              </div>
+              <div className={styles.benefits_alexa_img}>
+                <Image
+                  src="/Alexa_google.png"
+                  alt="Alexa_google.png image"
+                  width="214"
+                  height="80"
+                />
+              </div>
+            </div>
+            <div
+              className={styles.benefits_btn_box}
+              style={{ marginTop: "0px" }}
+            >
+              <button className={styles.benefits_btn}>
+                See the Magic of Smi-Fi
+                <FontAwesomeIcon icon={faArrowRight} />
+              </button>
+            </div>
+          </div>
+          <div className={styles.benefits_img}>
+            <Image
+              src="/benefits_frame_2.png"
+              alt="benefits_frame_2 image"
+              width="720"
+              height="691"
+            />
+          </div>
+        </div>
+        {/* 3 */}
+        <div className={styles.benefits_frame_content}>
+          <div className={styles.benefits_content_btn}>
+            <div className={styles.benefits_content}>
+              <div className={styles.benefits_helperText_1}>AUTOMATION</div>
+              <div className={styles.benefits_helperText_2}>
+                <p>
+                  Upgrade your <span>savings.</span>
+                </p>
+              </div>
+              <div className={styles.benefits_helperText_1_3}>
+                Get alerts on unattended appliances or unhealthy appliances and
+                control it with your phone.
+              </div>
+            </div>
+            <div className={styles.benefits_btn_box}>
+              <button className={styles.benefits_btn}>
+                See the Magic of Smi-Fi
+                <FontAwesomeIcon icon={faArrowRight} />
+              </button>
+            </div>
+          </div>
+          <div className={styles.benefits_img}>
+            <Image
+              src="/benefits_frame_3.png"
+              alt="benefits_frame_3 image"
+              width="720"
+              height="691"
+            />
+          </div>
+        </div>
       </div>
     </>
   );
 }
 
 // Helper Text "unlock superpower"
-
 function HelperTextSuperpower() {
   return (
     <>
-      <div className={styles.superpowerContainer}>
+      <div className={styles.superpower_container}>
         <div className={styles.superpower_designImg_text}>
           <div className={styles.superpower_imgLeft}>
             <Image
