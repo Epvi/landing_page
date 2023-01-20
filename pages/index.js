@@ -9,6 +9,46 @@ export default function Home() {
       <div className={styles.main}>
         <GetSmifi />
         <Features />
+        <HelperTextSuperpower />
+      </div>
+    </>
+  );
+}
+
+// Helper Text "unlock superpower"
+
+function HelperTextSuperpower() {
+  return (
+    <>
+      <div className={styles.superpowerContainer}>
+        <div className={styles.superpower_designImg_text}>
+          <div className={styles.superpower_imgLeft}>
+            <Image
+              src="/design_left.png"
+              alt="left_side_design"
+              width="170"
+              height="70"
+            />
+          </div>
+          <div className={styles.superpower_text}>
+            <div className={styles.superpower_strong}>
+              Unlock the superpower of your home
+            </div>
+            <div className={styles.superpower_light}>
+              With Smi-Fi, you embrace the smarter way to use electricity, all
+              your appliance becomes connected and your home becomes energy
+              conscious smart home
+            </div>
+          </div>
+          <div className={styles.superpower_imgRight}>
+            <Image
+              src="/design_right.png"
+              alt="right_side_design"
+              width="170"
+              height="70"
+            />
+          </div>
+        </div>
       </div>
     </>
   );

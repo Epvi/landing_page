@@ -332,3 +332,73 @@
 .features_frame3_Text span {
   font-weight: 700;
 }
+
+/* ========================= Helper text SuperPower ===============================*/
+.superpowerContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 150px;
+}
+
+.superpower_designImg_text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.superpower_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 20px; /*have to change this*/
+
+  width: 957px;
+  height: 171px;
+  left: 254px;
+  /* top: 1258px; */
+}
+
+.superpower_text .superpower_strong {
+  width: 957px;
+  height: 58px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 58px;
+  /* identical to box height, or 121% */
+
+  text-align: center;
+
+  color: #162637;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.superpower_text .superpower_light {
+  width: 675px;
+  height: 93px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 31px;
+  /* or 155% */
+
+  text-align: center;
+
+  color: #333333;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
