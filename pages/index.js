@@ -4,6 +4,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import styles from "../styles/Home.module.css";
 import ourAppStyles from "../styles/OurApp.module.css";
 import safetyStyles from "../styles/Safety.module.css";
+import associatesStyles from "../styles/associates.module.css";
 
 export default function Home() {
   return (
@@ -17,6 +18,29 @@ export default function Home() {
         <ApplicationFeature1 />
         <Safety />
         <SafetyFeatures />
+        <AssociationCompanies />
+      </div>
+    </>
+  );
+}
+
+function AssociationCompanies() {
+  return (
+    <>
+      <div className={associatesStyles.associates_container}>
+        <div className={associatesStyles.associates_content_image}>
+          <div className={associatesStyles.associates_content}>
+            We have worked with
+          </div>
+          <div className={associatesStyles.associates_img}>
+            <Image
+              src="/associate_counterPart.png"
+              alt="associate_counterPart images"
+              width="1162"
+              height="117"
+            />
+          </div>
+        </div>
       </div>
     </>
   );
