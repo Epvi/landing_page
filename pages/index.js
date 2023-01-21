@@ -2,6 +2,7 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import styles from "../styles/Home.module.css";
+import ourAppStyles from "../styles/OurApp.module.css";
 
 export default function Home() {
   return (
@@ -11,8 +12,157 @@ export default function Home() {
         <Features />
         <HelperTextSuperpower />
         <Benefits />
+        <AppCosmos />
+        <ApplicationFeature1 />
       </div>
     </>
+  );
+}
+
+function ApplicationFeature1() {
+  return (
+    <>
+      {/* 1st */}
+      <div className={ourAppStyles.appFeature_1_container}>
+        <div className={ourAppStyles.appFeature_1_content_btn}>
+          <div className={ourAppStyles.appFeature_1_content}>
+            <div className={ourAppStyles.appFeature_1_text_1}>
+              ENERGY SAVING
+            </div>
+            <div className={ourAppStyles.appFeature_1_text_2}>
+              <p>Stay on top of electricity usage.</p>
+            </div>
+            <div className={ourAppStyles.appFeature_1_text_3}>
+              <p>
+                Track <span>real-time electricity consumption </span> with live
+                updates and detailed analytics for each day, week, and month.
+                Know exactly how much energy your appliances and devices are
+                using, and make smarter choices about your energy consumption.
+              </p>
+            </div>
+          </div>
+          <div className={ourAppStyles.appFeature_btn_box}>
+            <button className={ourAppStyles.appFeature_btn}>
+              See more
+              <div className={ourAppStyles.appFeature_btn_circle}>
+                <FontAwesomeIcon icon={faArrowRight} />
+              </div>
+            </button>
+          </div>
+        </div>
+        <div className={ourAppStyles.appFeature_1_frame}>
+          <Image
+            src="/our_app_feature_1.png"
+            alt="our_app_feature_1 Image"
+            width="534"
+            height="542"
+          />
+        </div>
+      </div>
+      {/*  2nd */}
+      <div
+        className={`${ourAppStyles.appFeature_1_container} ${ourAppStyles.appFeature_2_container}`}
+      >
+        <div className={ourAppStyles.appFeature_1_content_btn}>
+          <div className={ourAppStyles.appFeature_1_content}>
+            <div className={ourAppStyles.appFeature_1_text_1}>
+              ENERGY SAVING
+            </div>
+            <div className={ourAppStyles.appFeature_1_text_2}>
+              <p>
+                Know when <br /> your appliance needs
+                <span id={ourAppStyles.appFeature_2_text_2_span_1}> care.</span>
+              </p>
+            </div>
+            <div className={ourAppStyles.appFeature_1_text_3}>
+              <p>
+                With Smi-Fi you know which appliances are working smoothly and
+                gives you the power to proactively maintain the health of your
+                appliances, saving you time and money in the long run.
+              </p>
+            </div>
+          </div>
+          <div className={ourAppStyles.appFeature_btn_box}>
+            <button className={ourAppStyles.appFeature_btn}>
+              See more
+              <div className={ourAppStyles.appFeature_btn_circle}>
+                <FontAwesomeIcon icon={faArrowRight} />
+              </div>
+            </button>
+          </div>
+        </div>
+        <div className={ourAppStyles.appFeature_2_frame}>
+          <Image
+            src="/our_app_feature_2.png"
+            alt="our_app_feature_2 Image"
+            width="640"
+            height="541"
+          />
+        </div>
+      </div>
+      {/* 3rd */}
+      <div className={ourAppStyles.appFeature_1_container}>
+        <div className={ourAppStyles.appFeature_1_content_btn}>
+          <div className={ourAppStyles.appFeature_1_content}>
+            <div className={ourAppStyles.appFeature_1_text_1}>
+              ENERGY SAVING
+            </div>
+            <div className={ourAppStyles.appFeature_1_text_2}>
+              <p>
+                Take actions on{" "}
+                <span id={ourAppStyles.appFeature_3_text_2_span_2}>alerts!!</span>
+              </p>
+            </div>
+            <div className={ourAppStyles.appFeature_1_text_3}>
+              <p>
+                Smi-Fi finds the hidden unhealthy appliances, current leakage in
+                wires. So, you can <span>get notifications</span> and book our
+                expert electrician to get them fixed.
+              </p>
+            </div>
+          </div>
+          <div className={ourAppStyles.appFeature_btn_box}>
+            <button className={ourAppStyles.appFeature_btn}>
+              See more
+              <div className={ourAppStyles.appFeature_btn_circle}>
+                <FontAwesomeIcon icon={faArrowRight} />
+              </div>
+            </button>
+          </div>
+        </div>
+        <div className={ourAppStyles.appFeature_1_frame}>
+          <Image
+            src="/our_app_feature_3.png"
+            alt="our_app_feature_3 Image"
+            width="534"
+            height="542"
+          />
+        </div>
+      </div>
+    </>
+  );
+}
+
+function AppCosmos() {
+  return (
+    <div className={ourAppStyles.appCosmos_container}>
+      <div className={ourAppStyles.appCosmos_content}>
+        <div className={ourAppStyles.appCosmos_content_strong}>
+          <p>Let’s do it with EpVi Cosmos App</p>
+        </div>
+        <div className={ourAppStyles.appCosmos_content_light}>
+          <p>All Smi-Fi amazing benefits can be accessed through this app.</p>
+        </div>
+      </div>
+      <div className={ourAppStyles.appCosmos_ourApp_1}>
+        <Image
+          src="/ourApp_1.png"
+          height="540"
+          width="358"
+          alt="Epvi app image"
+        />
+      </div>
+    </div>
   );
 }
 

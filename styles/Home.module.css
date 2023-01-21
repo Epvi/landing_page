@@ -99,7 +99,7 @@
     #f65aad 51.83%,
     rgba(236, 61, 67, 0.954327) 58.3%
   );
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -471,7 +471,7 @@
     #f65aad 51.83%,
     rgba(236, 61, 67, 0.954327) 58.3%
   );
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
