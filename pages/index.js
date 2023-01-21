@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import styles from "../styles/Home.module.css";
 import ourAppStyles from "../styles/OurApp.module.css";
+import safetyStyles from "../styles/Safety.module.css";
 
 export default function Home() {
   return (
@@ -14,6 +15,109 @@ export default function Home() {
         <Benefits />
         <AppCosmos />
         <ApplicationFeature1 />
+        <Safety />
+        <SafetyFeatures />
+      </div>
+    </>
+  );
+}
+
+function SafetyFeatures() {
+  return (
+    <>
+      <div className={safetyStyles.safety_features_container}>
+        {/* 1 */}
+        <div className={safetyStyles.safety_features_box}>
+          <div className={safetyStyles.safety_features_img}>
+            <Image
+              src="/safety-feature-recycling-1.png"
+              alt="safety-feature-recycling-1 Image"
+              width="65"
+              height="65"
+            />
+          </div>
+          <div className={safetyStyles.safety_features_backNumber}>1</div>
+          <div className={safetyStyles.safety_features_txt_1}>
+            Voltage fluctuations
+          </div>
+          <div className={safetyStyles.safety_features_txt_1_2}>
+            EpVi Cosmos send the notifications when Smi-Fi analyzes any abnormal
+            activity in your electrical appliances
+          </div>
+        </div>
+        {/* 2 */}
+        <div className={safetyStyles.safety_features_box}>
+          <div className={safetyStyles.safety_features_img}>
+            <Image
+              src="/safety-feature-home-1.png"
+              alt="safety-feature-recycling-2 Image"
+              width="65"
+              height="65"
+            />
+          </div>
+          <div className={safetyStyles.safety_features_backNumber}>2</div>
+          <div className={safetyStyles.safety_features_txt_1}>
+            Short circuit
+          </div>
+          <div className={safetyStyles.safety_features_txt_1_2}>
+            App guides you to fix Faulty appliances, current leakage issues and
+            allows to Turn off appliances through phone
+          </div>
+        </div>
+        {/* 3 */}
+        <div className={safetyStyles.safety_features_box}>
+          <div className={safetyStyles.safety_features_img}>
+            <Image
+              src="/safety-feature-electricity-1.png"
+              alt="safety-feature-recycling-3 Image"
+              width="65"
+              height="65"
+            />
+          </div>
+          <div className={safetyStyles.safety_features_backNumber}>3</div>
+          <div className={safetyStyles.safety_features_txt_1}>
+            Appliance issue
+          </div>
+          <div className={safetyStyles.safety_features_txt_3_2}>
+            Smi-Fi keeps you updated and to avoid sudden breakdown of
+            appliances. This expands the life of your appliances too.
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+function Safety() {
+  return (
+    <>
+      <div className={safetyStyles.safety_container}>
+        <div className={safetyStyles.safety_content_design}>
+          {/* We've used wrapper to postion txt with safety first box */}
+          <div className={safetyStyles.safety_wrapper}>
+            <div className={safetyStyles.safety_first_box}>SAFETY FIRST</div>
+            <div className={safetyStyles.safety_content_txt}>
+              <div className={safetyStyles.safety_content_txt_1}>
+                PROTECTION
+              </div>
+              <div className={safetyStyles.safety_content_txt_2}>
+                Get a peace of mind.
+              </div>
+              <div className={safetyStyles.safety_content_txt_3}>
+                Smi-Fi keeps you updated and to avoid sudden breakdown of
+                appliances. This expands the life of your appliances too.
+              </div>
+            </div>
+          </div>
+          <div className={safetyStyles.safety_dot_side_design}>
+            <Image
+              src="/accounting_dots.svg.png"
+              alt="side_dot_image"
+              width="430"
+              height="70"
+            />
+          </div>
+        </div>
       </div>
     </>
   );
@@ -110,7 +214,9 @@ function ApplicationFeature1() {
             <div className={ourAppStyles.appFeature_1_text_2}>
               <p>
                 Take actions on{" "}
-                <span id={ourAppStyles.appFeature_3_text_2_span_2}>alerts!!</span>
+                <span id={ourAppStyles.appFeature_3_text_2_span_2}>
+                  alerts!!
+                </span>
               </p>
             </div>
             <div className={ourAppStyles.appFeature_1_text_3}>
@@ -158,7 +264,7 @@ function AppCosmos() {
         <Image
           src="/ourApp_1.png"
           height="540"
-          width="358"
+          width="700"
           alt="Epvi app image"
         />
       </div>
