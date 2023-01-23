@@ -69,7 +69,7 @@
 
 /* ----------------------- Safety Features ---------------------------------*/
 .safety_features_container {
-  width: 100%;
+  max-width: 100%;
   height: 291px;
   /* margin-left: 10px; */
   padding-top: 50px;

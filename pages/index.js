@@ -4,6 +4,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import styles from "../styles/Home.module.css";
 import ourAppStyles from "../styles/OurApp.module.css";
 import safetyStyles from "../styles/Safety.module.css";
+import associatesStyles from "../styles/associates.module.css";
 
 export default function Home() {
   return (
@@ -14,9 +15,61 @@ export default function Home() {
         <HelperTextSuperpower />
         <Benefits />
         <AppCosmos />
-        <ApplicationFeature1 />
+        <ApplicationFeatures />
         <Safety />
         <SafetyFeatures />
+        <AssociationCompanies />
+        <VideoBox />
+      </div>
+    </>
+  );
+}
+
+// styles are in associatesStyles
+const embedId = "KmfF32_Jvg0";
+function VideoBox() {
+  return (
+    <>
+      <div className={associatesStyles.videoBox_container}>
+        <div className={associatesStyles.videoBox_txt}>
+          <p>
+            An Experience <br /> <span>People Love to Talk About</span>
+          </p>
+        </div>
+        <div className={associatesStyles.videoBox_frame_link}>
+          <div className={associatesStyles.videoBox_frame}>
+            <iframe
+              width="884"
+              height="446"
+              src={`https://www.youtube.com/embed/${embedId}`}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              title="Embedded youtube"
+            />
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+function AssociationCompanies() {
+  return (
+    <>
+      <div className={associatesStyles.associates_container}>
+        <div className={associatesStyles.associates_content_image}>
+          <div className={associatesStyles.associates_content}>
+            We have worked with
+          </div>
+          <div className={associatesStyles.associates_img}>
+            <Image
+              src="/associate_counterPart.png"
+              alt="associate_counterPart images"
+              width="1162"
+              height="117"
+            />
+          </div>
+        </div>
       </div>
     </>
   );
@@ -123,7 +176,7 @@ function Safety() {
   );
 }
 
-function ApplicationFeature1() {
+function ApplicationFeatures() {
   return (
     <>
       {/* 1st */}

@@ -421,7 +421,8 @@
   padding: 0px;
   gap: 24px;
 
-  width: 156%;
+  max-width: 100%;
+  /* width: 156%; */
   height: 247px;
 }
 
