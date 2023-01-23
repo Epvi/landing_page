@@ -29,6 +29,8 @@ export default function Home() {
   );
 }
 
+
+
 function FaQ() {
   return (
     <>
@@ -37,9 +39,6 @@ function FaQ() {
           <div className={FaQStyles.faq_heading}>
             Frequently Asked Questions?
           </div>
-        </div>
-        <div className={FaQStyles.faq_solution_block}>
-          <></>
         </div>
       </div>
     </>
