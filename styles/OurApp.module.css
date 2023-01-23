@@ -1,0 +1,202 @@
+/* ============= Cosmose App =======================*/
+.appCosmos_container {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  margin-top: 180px;
+  margin-bottom: 117px;
+}
+
+.appCosmos_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.appCosmos_content .appCosmos_content_strong {
+  width: 563px;
+  height: 58px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 58px;
+  text-align: center;
+  color: #162637;
+}
+
+.appCosmos_content .appCosmos_content_light {
+  width: 650px;
+  height: 31px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 31px;
+
+  text-align: center;
+  color: #333333;
+}
+
+.appCosmos_ourApp_1 {
+  margin-top: 70px;
+}
+
+/* =============   Our App Feature 1 =======================*/
+
+.appFeature_1_container {
+  display: flex;
+  /* justify-content: space-around; */
+  justify-content: space-between;
+  /* margin-top: 117px; */
+
+  padding-top: 97px;
+  padding-left: 112px;
+  padding-right: 209px;
+}
+
+.appFeature_1_content_btn {
+  width: 553px;
+  height: 505px;
+  margin-top: 97px;
+}
+
+.appFeature_1_content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.appFeature_1_text_1 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 12px;
+  /* identical to box height, or 143% */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: #377bff;
+}
+
+.appFeature_1_text_2 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 52px;
+  line-height: 56px;
+  margin-bottom: 24px;
+  /* or 108% */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.02em;
+
+  color: #171717;
+}
+.appFeature_1_text_2 p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.appFeature_1_text_3 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+
+  display: flex;
+  align-items: center;
+
+  color: #404040;
+}
+.appFeature_1_text_3 p {
+  margin: 0px;
+  padding: 0px;
+}
+.appFeature_1_text_3 p span {
+  font-weight: 700;
+}
+
+.appFeature_btn_box {
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
+  margin-top: 20px;
+
+  width: 138px;
+  height: 44px;
+}
+
+.appFeature_btn_box .appFeature_btn {
+  width: 180px;
+  height: 44px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  background-color: white;
+
+  color: #000000;
+}
+
+.appFeature_btn_box .appFeature_btn .appFeature_btn_circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  color: white;
+  background: linear-gradient(55.05deg, #5cc0df 6.54%, #7692fa 89.18%);
+  border-radius: 50px;
+}
+
+.appFeature_2_container {
+  padding-right: 112px;
+}
+
+#appFeature_2_text_2_span_1 {
+  background: linear-gradient(55.05deg, #5cc0df 6.54%, #7692fa 89.18%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#appFeature_3_text_2_span_2 {
+  background: linear-gradient(
+    91.13deg,
+    #2ca2b4 -71.54%,
+    #5598de -42.51%,
+    #7f87ff -15.71%,
+    #f65aad 8.86%,
+    rgba(236, 61, 67, 0.954327) 35.66%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
