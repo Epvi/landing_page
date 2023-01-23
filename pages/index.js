@@ -6,6 +6,7 @@ import ourAppStyles from "../styles/OurApp.module.css";
 import safetyStyles from "../styles/Safety.module.css";
 import associatesStyles from "../styles/associates.module.css";
 import smifiUserCardsStyles from "../styles/SmifiUsersCards.module.css";
+import FaQStyles from "../styles/FaQ.module.css";
 
 export default function Home() {
   return (
@@ -22,6 +23,24 @@ export default function Home() {
         <AssociationCompanies />
         <VideoBox />
         <HappySmifiUsers />
+        <FaQ />
+      </div>
+    </>
+  );
+}
+
+function FaQ() {
+  return (
+    <>
+      <div className={FaQStyles.faq_container}>
+        <div className={FaQStyles.faq_heading_box}>
+          <div className={FaQStyles.faq_heading}>
+            Frequently Asked Questions?
+          </div>
+        </div>
+        <div className={FaQStyles.faq_solution_block}>
+          <></>
+        </div>
       </div>
     </>
   );
