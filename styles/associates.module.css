@@ -31,3 +31,58 @@
   text-align: center;
   color: #192b40;
 }
+
+/* ================== Video styles ================================ */
+.videoBox_container {
+  height: 830px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.videoBox_txt {
+  width: 919px;
+  height: 116px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 58px;
+
+  text-align: center;
+  color: #192b40;
+}
+
+.videoBox_txt > p > span {
+  font-weight: 700;
+}
+
+.videoBox_frame_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  height: 464px;
+
+  background: linear-gradient(
+    90deg,
+    #51dce5 0%,
+    #3f72f3 24%,
+    #644ef3 45%,
+    #b06ef3 74%,
+    #e17c87 100%
+  );
+  border-radius: 20px;
+}
+
+.videoBox_frame {
+  padding: 0px;
+  width: 884px;
+  height: 445.71px;
+  transform: translateY(0px);
+  border-radius: 12px;
+  overflow: hidden;
+}

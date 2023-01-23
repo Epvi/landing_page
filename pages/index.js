@@ -15,10 +15,39 @@ export default function Home() {
         <HelperTextSuperpower />
         <Benefits />
         <AppCosmos />
-        <ApplicationFeature1 />
+        <ApplicationFeatures />
         <Safety />
         <SafetyFeatures />
         <AssociationCompanies />
+        <VideoBox />
+      </div>
+    </>
+  );
+}
+
+// styles are in associatesStyles
+const embedId = "KmfF32_Jvg0";
+function VideoBox() {
+  return (
+    <>
+      <div className={associatesStyles.videoBox_container}>
+        <div className={associatesStyles.videoBox_txt}>
+          <p>
+            An Experience <br /> <span>People Love to Talk About</span>
+          </p>
+        </div>
+        <div className={associatesStyles.videoBox_frame_link}>
+          <div className={associatesStyles.videoBox_frame}>
+            <iframe
+              width="884"
+              height="446"
+              src={`https://www.youtube.com/embed/${embedId}`}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              title="Embedded youtube"
+            />
+          </div>
+        </div>
       </div>
     </>
   );
@@ -147,7 +176,7 @@ function Safety() {
   );
 }
 
-function ApplicationFeature1() {
+function ApplicationFeatures() {
   return (
     <>
       {/* 1st */}
