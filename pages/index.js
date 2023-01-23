@@ -5,6 +5,7 @@ import styles from "../styles/Home.module.css";
 import ourAppStyles from "../styles/OurApp.module.css";
 import safetyStyles from "../styles/Safety.module.css";
 import associatesStyles from "../styles/associates.module.css";
+import smifiUserCardsStyles from "../styles/SmifiUsersCards.module.css";
 
 export default function Home() {
   return (
@@ -20,6 +21,129 @@ export default function Home() {
         <SafetyFeatures />
         <AssociationCompanies />
         <VideoBox />
+        <HappySmifiUsers />
+      </div>
+    </>
+  );
+}
+
+function HappySmifiUsers() {
+  return (
+    <>
+      <div className={smifiUserCardsStyles.smifi_users_container}>
+        <div className={smifiUserCardsStyles.smifi_users_helper_txt}>
+          <p>
+            Join a thousands of <br />
+            <span>Happy Smi-Fi users</span>
+          </p>
+        </div>
+        <div className={smifiUserCardsStyles.smifi_users_cards_box}>
+          {/* user 1 */}
+          <div className={smifiUserCardsStyles.smifi_users_card}>
+            <div
+              className={smifiUserCardsStyles.smifi_users_card_rotated}
+            ></div>
+            <div className={smifiUserCardsStyles.smifi_users_card_normal}>
+              <div
+                className={smifiUserCardsStyles.smifi_users_card_user_review}
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitati
+              </div>
+              <div
+                className={smifiUserCardsStyles.smifi_users_card_user_details}
+              >
+                <Image
+                  src="/user_card_profile_1.png"
+                  alt="user_card_profile_1 image"
+                  width="57"
+                  height="57"
+                />
+                <div
+                  className={
+                    smifiUserCardsStyles.smifi_users_card_user_personal_info
+                  }
+                >
+                  <p>
+                    <span>Richik</span> <br />
+                    CEO, HyreSnap
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* user 2 */}
+          <div className={smifiUserCardsStyles.smifi_users_card}>
+            <div
+              className={smifiUserCardsStyles.smifi_users_card_rotated}
+            ></div>
+            <div className={smifiUserCardsStyles.smifi_users_card_normal}>
+              <div
+                className={smifiUserCardsStyles.smifi_users_card_user_review}
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dna aliqua. Ut enim ad
+                minim veniam, quis nostrud exercitation
+              </div>
+              <div
+                className={smifiUserCardsStyles.smifi_users_card_user_details}
+              >
+                <Image
+                  src="/user_card_profile_2.png"
+                  alt="user_card_profile_2 image"
+                  width="57"
+                  height="57"
+                />
+                <div
+                  className={
+                    smifiUserCardsStyles.smifi_users_card_user_personal_info
+                  }
+                >
+                  <p>
+                    <span>Rajesh</span> <br />
+                    CEO, HyreSnap
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* user 3 */}
+          <div className={smifiUserCardsStyles.smifi_users_card}>
+            <div
+              className={smifiUserCardsStyles.smifi_users_card_rotated}
+            ></div>
+            <div className={smifiUserCardsStyles.smifi_users_card_normal}>
+              <div
+                className={smifiUserCardsStyles.smifi_users_card_user_review}
+              >
+                Lorem ipsum dolor sit amet, coetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation
+              </div>
+              <div
+                className={smifiUserCardsStyles.smifi_users_card_user_details}
+              >
+                <Image
+                  src="/user_card_profile_3.png"
+                  alt="user_card_profile_3 image"
+                  width="57"
+                  height="57"
+                />
+                <div
+                  className={
+                    smifiUserCardsStyles.smifi_users_card_user_personal_info
+                  }
+                >
+                  <p>
+                    <span>Archit</span> <br />
+                    CEO, HyreSnap
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
