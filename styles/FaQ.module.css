@@ -1,7 +1,6 @@
 .faq_container {
-  /* width: 1440px; */
   max-width: 100%;
-  height: 1167px;
+  height: fit-content;
 }
 
 .faq_heading_box {
@@ -40,7 +39,7 @@
   gap: 158px;
 
   width: 1100px;
-  height: 528px;
+  height: fit-content;
   margin: auto;
   margin-top: 64px;
 }
@@ -127,5 +126,6 @@
 /* ---------- Accordion -------- */
 .faq_accordion {
   width: 625px;
-  height: 528px;
+  /* height: 528px; */
+  height: fit-content;
 }

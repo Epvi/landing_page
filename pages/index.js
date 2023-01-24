@@ -198,8 +198,8 @@ function HappySmifiUsers() {
 }
 
 // styles are in associatesStyles
-const embedId = "KmfF32_Jvg0";
 function VideoBox() {
+  const embedId = "KmfF32_Jvg0";
   return (
     <>
       <div className={associatesStyles.videoBox_container}>
@@ -316,6 +316,14 @@ function SafetyFeatures() {
 function Safety() {
   return (
     <>
+      <div className={safetyStyles.safety_dot_side_design}>
+        <Image
+          src="/accounting_dots.svg.png"
+          alt="side_dot_image"
+          width="430"
+          height="70"
+        />
+      </div>
       <div className={safetyStyles.safety_container}>
         <div className={safetyStyles.safety_content_design}>
           {/* We've used wrapper to postion txt with safety first box */}
@@ -333,14 +341,6 @@ function Safety() {
                 appliances. This expands the life of your appliances too.
               </div>
             </div>
-          </div>
-          <div className={safetyStyles.safety_dot_side_design}>
-            <Image
-              src="/accounting_dots.svg.png"
-              alt="side_dot_image"
-              width="430"
-              height="70"
-            />
           </div>
         </div>
       </div>
