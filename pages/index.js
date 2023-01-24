@@ -1,11 +1,19 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowRight,
+  faArrowUpRightFromSquare,
+} from "@fortawesome/free-solid-svg-icons";
+
 import styles from "../styles/Home.module.css";
 import ourAppStyles from "../styles/OurApp.module.css";
 import safetyStyles from "../styles/Safety.module.css";
 import associatesStyles from "../styles/associates.module.css";
 import smifiUserCardsStyles from "../styles/SmifiUsersCards.module.css";
+import FaQStyles from "../styles/FaQ.module.css";
+
+import GetMeAccordion from "../src/GetMeAccordion";
 
 export default function Home() {
   return (
@@ -22,6 +30,46 @@ export default function Home() {
         <AssociationCompanies />
         <VideoBox />
         <HappySmifiUsers />
+        <FaQ />
+      </div>
+    </>
+  );
+}
+
+function FaQ() {
+  return (
+    <>
+      <div className={FaQStyles.faq_container}>
+        <div className={FaQStyles.faq_heading_box}>
+          <div className={FaQStyles.faq_heading}>
+            Frequently Asked Questions?
+          </div>
+        </div>
+        {/* Ask More Qustions */}
+        <div className={FaQStyles.faq_ask_accordion}>
+          <div className={FaQStyles.faq_ask}>
+            <div className={FaQStyles.faq_ask_helper_txt}>
+              Have more questions?
+            </div>
+            <div className={FaQStyles.faq_ask_block}>
+              <div className={FaQStyles.faq_ask_email}>
+                <Link href="#">Email support</Link>
+              </div>
+              <div className={FaQStyles.faq_ask_help_center}>
+                <Link href="#">
+                  <div>Go to Help Center</div>
+                  <div>
+                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+          {/* accordion */}
+          <div className={FaQStyles.faq_accordion}>
+            <GetMeAccordion />
+          </div>
+        </div>
       </div>
     </>
   );
@@ -150,8 +198,8 @@ function HappySmifiUsers() {
 }
 
 // styles are in associatesStyles
-const embedId = "KmfF32_Jvg0";
 function VideoBox() {
+  const embedId = "KmfF32_Jvg0";
   return (
     <>
       <div className={associatesStyles.videoBox_container}>
@@ -268,6 +316,14 @@ function SafetyFeatures() {
 function Safety() {
   return (
     <>
+      <div className={safetyStyles.safety_dot_side_design}>
+        <Image
+          src="/accounting_dots.svg.png"
+          alt="side_dot_image"
+          width="430"
+          height="70"
+        />
+      </div>
       <div className={safetyStyles.safety_container}>
         <div className={safetyStyles.safety_content_design}>
           {/* We've used wrapper to postion txt with safety first box */}
@@ -285,14 +341,6 @@ function Safety() {
                 appliances. This expands the life of your appliances too.
               </div>
             </div>
-          </div>
-          <div className={safetyStyles.safety_dot_side_design}>
-            <Image
-              src="/accounting_dots.svg.png"
-              alt="side_dot_image"
-              width="430"
-              height="70"
-            />
           </div>
         </div>
       </div>
