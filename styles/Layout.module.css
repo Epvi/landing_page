@@ -1,6 +1,8 @@
 /* ================ Navbar =========================*/
 .navContainer {
   display: flex;
+  position: sticky;
+  z-index: 100;
   /* flex-direction: column; */
   justify-content: center;
   align-items: center;
@@ -180,7 +182,6 @@
 .footer_social_media {
   display: flex;
   justify-content: space-between;
-  
 }
 .footer_copyright {
   margin-top: 35px;
