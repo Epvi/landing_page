@@ -1,12 +1,19 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowRight,
+  faArrowUpRightFromSquare,
+} from "@fortawesome/free-solid-svg-icons";
+
 import styles from "../styles/Home.module.css";
 import ourAppStyles from "../styles/OurApp.module.css";
 import safetyStyles from "../styles/Safety.module.css";
 import associatesStyles from "../styles/associates.module.css";
 import smifiUserCardsStyles from "../styles/SmifiUsersCards.module.css";
 import FaQStyles from "../styles/FaQ.module.css";
+
+import GetMeAccordion from "../src/GetMeAccordion";
 
 export default function Home() {
   return (
@@ -29,8 +36,6 @@ export default function Home() {
   );
 }
 
-
-
 function FaQ() {
   return (
     <>
@@ -38,6 +43,31 @@ function FaQ() {
         <div className={FaQStyles.faq_heading_box}>
           <div className={FaQStyles.faq_heading}>
             Frequently Asked Questions?
+          </div>
+        </div>
+        {/* Ask More Qustions */}
+        <div className={FaQStyles.faq_ask_accordion}>
+          <div className={FaQStyles.faq_ask}>
+            <div className={FaQStyles.faq_ask_helper_txt}>
+              Have more questions?
+            </div>
+            <div className={FaQStyles.faq_ask_block}>
+              <div className={FaQStyles.faq_ask_email}>
+                <Link href="#">Email support</Link>
+              </div>
+              <div className={FaQStyles.faq_ask_help_center}>
+                <Link href="#">
+                  <div>Go to Help Center</div>
+                  <div>
+                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                  </div>
+                </Link>
+              </div>
+            </div>
+          </div>
+          {/* accordion */}
+          <div className={FaQStyles.faq_accordion}>
+            <GetMeAccordion />
           </div>
         </div>
       </div>
