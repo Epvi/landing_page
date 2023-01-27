@@ -43,6 +43,7 @@ function GetMeAccordion() {
           fontSize="16px"
           lineHeight="24px"
           paddingLeft="5px"
+          marginBottom="10px"
         >
           {faqData[0].solution}
         </AccordionPanel>
@@ -54,7 +55,6 @@ function GetMeAccordion() {
             paddingBottom="25px"
             borderBottom="1px solid #EAECF0"
             bg="white"
-            _expanded={{ fontFamily: "Montserrat", color: "#000000" }}
           >
             <Box
               flex="1"
@@ -64,6 +64,7 @@ function GetMeAccordion() {
               letterSpacing="-0.02em"
               fontSize="20px"
               lineHeight="28px"
+              w="100%"
             >
               {faqData[1].title}
             </Box>
@@ -71,12 +72,14 @@ function GetMeAccordion() {
           </AccordionButton>
         </h2>
         <AccordionPanel
-          pb={4}
+          // pb={4}
           fontFamily="Montserrat"
           fontWeight="400"
           letterSpacing="-0.02em"
           fontSize="16px"
           lineHeight="24px"
+          paddingLeft="5px"
+          marginBottom="10px"
         >
           {faqData[1].solution}
         </AccordionPanel>
@@ -88,7 +91,6 @@ function GetMeAccordion() {
             paddingBottom="25px"
             borderBottom="1px solid #EAECF0"
             bg="white"
-            _expanded={{ fontFamily: "Montserrat", color: "#000000" }}
           >
             <Box
               flex="1"
@@ -98,6 +100,7 @@ function GetMeAccordion() {
               letterSpacing="-0.02em"
               fontSize="20px"
               lineHeight="28px"
+              w="100%"
             >
               {faqData[2].title}
             </Box>
@@ -105,12 +108,14 @@ function GetMeAccordion() {
           </AccordionButton>
         </h2>
         <AccordionPanel
-          pb={4}
+          // pb={4}
           fontFamily="Montserrat"
           fontWeight="400"
           letterSpacing="-0.02em"
           fontSize="16px"
           lineHeight="24px"
+          paddingLeft="5px"
+          marginBottom="10px"
         >
           {faqData[2].solution}
         </AccordionPanel>
@@ -122,7 +127,6 @@ function GetMeAccordion() {
             paddingBottom="25px"
             borderBottom="1px solid #EAECF0"
             bg="white"
-            _expanded={{ fontFamily: "Montserrat", color: "#000000" }}
           >
             <Box
               flex="1"
@@ -132,6 +136,7 @@ function GetMeAccordion() {
               letterSpacing="-0.02em"
               fontSize="20px"
               lineHeight="28px"
+              w="100%"
             >
               {faqData[3].title}
             </Box>
@@ -139,12 +144,14 @@ function GetMeAccordion() {
           </AccordionButton>
         </h2>
         <AccordionPanel
-          pb={4}
+          // pb={4}
           fontFamily="Montserrat"
           fontWeight="400"
           letterSpacing="-0.02em"
           fontSize="16px"
           lineHeight="24px"
+          paddingLeft="5px"
+          marginBottom="10px"
         >
           {faqData[3].solution}
         </AccordionPanel>
@@ -156,7 +163,6 @@ function GetMeAccordion() {
             paddingBottom="25px"
             borderBottom="1px solid #EAECF0"
             bg="white"
-            _expanded={{ fontFamily: "Montserrat", color: "#000000" }}
           >
             <Box
               flex="1"
@@ -166,6 +172,7 @@ function GetMeAccordion() {
               letterSpacing="-0.02em"
               fontSize="20px"
               lineHeight="28px"
+              w="100%"
             >
               {faqData[4].title}
             </Box>
@@ -173,12 +180,14 @@ function GetMeAccordion() {
           </AccordionButton>
         </h2>
         <AccordionPanel
-          pb={4}
+          // pb={4}
           fontFamily="Montserrat"
           fontWeight="400"
           letterSpacing="-0.02em"
           fontSize="16px"
           lineHeight="24px"
+          paddingLeft="5px"
+          marginBottom="10px"
         >
           {faqData[4].solution}
         </AccordionPanel>

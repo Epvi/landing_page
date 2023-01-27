@@ -1,6 +1,7 @@
 .smifi_users_container {
   max-width: 100%;
-  height: 545px;
+  /* height: 578px; */
+  height: 578px;
   background: #f9f9f9;
   padding-top: 52px;
 }
