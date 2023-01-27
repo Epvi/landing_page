@@ -61,17 +61,9 @@
 }
 
 .videoBox_frame_link {
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* width: 900px; */
   width: 62.5%;
-  /* height: auto; */
   max-width: 890px;
   padding: 10px;
-  /* padding-top: 5px;
-  padding-bottom: 5px; */
-  /* height: 464px; */
 
   background: linear-gradient(
     90deg,
@@ -87,19 +79,16 @@
 .videoBox_frame {
   position: relative;
   padding: 0px;
-  /* height: 100%; */
-  /* width: 873px; */
   width: 99.2%;
   margin: auto;
   height: 445.71px;
-  /* height: auto; */
+
   transform: translateY(0px);
   border-radius: 12px;
   overflow: hidden;
 }
 
 .videoBox_frame iframe {
-  /* position: absolute; */
   top: 0;
   bottom: 0;
   left: 0;
