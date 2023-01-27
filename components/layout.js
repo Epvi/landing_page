@@ -1,4 +1,5 @@
-import Image from "next/image";
+// import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import styles from "../styles/Layout.module.css";
 
@@ -16,7 +17,6 @@ export const Navbar = () => {
   return (
     <>
       <div className={styles.navContainer}>
-        <div className={styles.navContent}>
           <div className={styles.logoBlock}>
             <Image
               src="/LogoBlock.png"
@@ -36,7 +36,6 @@ export const Navbar = () => {
             <button id={styles.btn1}>Contact Us</button>
             <button id={styles.btn2}>Get Smi-Fi</button>
           </div>
-        </div>
       </div>
     </>
   );
@@ -52,8 +51,8 @@ export const Footer = () => {
             <Image
               src="/hr_tag_design.png"
               alt="hr Tag design"
-              width="1100"
-              height="8"
+              layout="fill"
+              objectFit="cover"
             />
           </div>
           <div className={styles.footer_content}>

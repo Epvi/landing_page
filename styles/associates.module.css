@@ -14,7 +14,7 @@
   padding: 0px;
   gap: 50px;
 
-  width: 1162px;
+  width: 84.69%;
   height: 225.52px;
 }
 
@@ -32,10 +32,11 @@
   color: #192b40;
 }
 
+
 /* ================== Video styles ================================ */
 .videoBox_container {
+  width: 100%;
   height: 830px;
-  max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -86,3 +87,4 @@
   border-radius: 12px;
   overflow: hidden;
 }
+

@@ -1,7 +1,7 @@
 .main {
   margin-top: 80px;
   width: 100%;
-  height: fit-content;
+  /* height: fit-content; */
   left: 0px;
   top: 122px;
   background: #ffffff;
@@ -15,7 +15,8 @@
   align-items: center;
   padding: 0px;
   width: 80%;
-  height: 506px;
+  /* height: 506px; */
+  height: fit-content;
 }
 
 .getSmifi_content {
@@ -38,7 +39,7 @@
   padding: 0px;
   gap: 40px;
 
-  height: 284px;
+  height: fit-content;
 
   /* Inside auto layout */
 
@@ -54,8 +55,10 @@
   padding: 0px;
   gap: 12px;
 
-  width: 649px;
-  height: 144px;
+  /* width: 649px;
+  height: 144px; */
+  width: inherit;
+  height: fit-content;
 }
 
 .getSmifi_energyAssistant {
@@ -74,8 +77,10 @@
 }
 
 .getSmifi_smarterHomes {
-  width: 642px;
-  height: 112px;
+  max-width: 652.39px;
+  height: inherit;
+  /* width: 642px;
+  height: 112px; */
 
   font-family: "Montserrat";
   font-style: normal;
@@ -89,23 +94,28 @@
 
   color: #171717;
 }
+.getSmifi_smarterHomes p {
+  margin: 0px;
+  padding: 0px;
+}
 
 .getSmifi_smarterHomes > p > span {
-  background: -webkit-linear-gradient(
-    0deg,
-    /* 91.67deg, */ #2ca2b4 32.41%,
-    #5598de 39.42%,
-    #7f87ff 45.9%,
-    #f65aad 51.83%,
-    rgba(236, 61, 67, 0.954327) 58.3%
+  background: linear-gradient(
+    90deg,
+    rgba(44, 162, 180, 1) 14%,
+    rgba(109, 143, 241, 1) 42%,
+    rgba(245, 88, 163, 1) 69%,
+    rgba(237, 70, 76, 1) 80%
   );
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .supportText {
-  width: 488px;
-  height: 28px;
+  /* width: 488px; */
+  width: inherit;
+  /* height: 28px; */
+  height: inherit;
 
   /* Paragraph/Large/Regular */
 
@@ -195,6 +205,15 @@
   color: #737373;
 }
 
+.getSmifi_mobileApp_device {
+  position: relative;
+  width: 550px; /* taking 80% of the whole window */
+  min-width: 320px;
+  min-width: 516.81px;
+  height: 506px;
+  /* background-color: #2ca2b4; */
+}
+
 /* ======================= Features ================================== */
 
 .features_container {
@@ -209,18 +228,20 @@
   /* top: 778px; */
 }
 
-.features_frame1 {
-  box-sizing: border-box;
+.features_frame {
+  /* box-sizing: border-box; */
   width: 300px;
   height: 330px;
 
   background: #ffffff;
   border: 1px solid #e5e5e5;
   border-radius: 20px;
-
-  flex: none; /*to maintain order of images in frame div*/
-  order: 0;
-  flex-grow: 0;
+}
+.features_frame:hover {
+  z-index: 4;
+  box-shadow: 0px 4px 50px rgba(22, 38, 55, 0.1);
+  background: white;
+  border: none;
 }
 
 .features_frame1_img {
@@ -228,7 +249,6 @@
   left: 19px;
   top: 20px;
 }
-
 .features_frame1_Text {
   margin: 25px 87px 21px 19px;
   width: 194px;
@@ -247,60 +267,25 @@
   font-weight: 700;
 }
 
-.features_frame2 {
-  width: 300px;
-  height: 330px;
-
-  background: #ffffff;
-  box-shadow: 0px 4px 50px rgba(22, 38, 55, 0.1);
-  border-radius: 20px;
-
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-}
 .features_frame2_img {
-  /* margin: auto; */
   margin: 20px 76px 20px 20px;
   left: 20px;
   top: 20px;
 }
 .features_frame2_Text {
-  /* margin: auto; */
   margin: 20px 80px 26px 20px;
   width: 200px;
   height: 54px;
-  left: 20px;
-  top: 250px;
-
   font-family: "Montserrat";
   font-style: normal;
-  margin-left: 20px, 80px, 26px, 20px;
-  /* font-weight: 700; */
   font-size: 18px;
   line-height: 27px;
-  /* or 150% */
-
   color: #2d3f61;
 }
 .features_frame2_Text span {
   font-weight: 700;
 }
 
-.features_frame3 {
-  box-sizing: border-box;
-
-  width: 300px;
-  height: 330px;
-
-  background: #ffffff;
-  border: 1px solid #e5e5e5;
-  border-radius: 20px;
-
-  flex: none;
-  order: 2;
-  flex-grow: 0;
-}
 .features_frame3_img {
   margin: 17px 50px 23px 20px;
   left: 20px;
@@ -344,14 +329,18 @@
   padding: 0px;
   gap: 20px;
 
-  width: 957px;
-  height: 171px;
+  /* width: 957px;
+  height: 171px; */
+  width: 73%;
+  height: auto;
   left: 254px;
 }
 
 .superpower_text .superpower_strong {
-  width: 957px;
-  height: 58px;
+  /* width: 957px; */
+  /* height: 58px; */
+  width: 100%;
+  height: auto;
 
   font-family: "Montserrat";
   font-style: normal;
@@ -365,8 +354,10 @@
 }
 
 .superpower_text .superpower_light {
-  width: 675px;
-  height: 93px;
+  /* width: 675px; */
+  /* height: 93px; */
+  width: 70%;
+  height: auto;
 
   font-family: "Montserrat";
   font-style: normal;
@@ -379,9 +370,19 @@
   color: #333333;
 }
 
-.superpower_smifi_image {
+.superpower_smifi_image_box {
+  width: 100%;
+  height: auto;
   margin: auto;
   margin-top: 65px;
+}
+
+.superpower_smifi_image {
+  position: relative;
+  margin: auto;
+  /* width: 455px; */
+  width: 31.9%;
+  height: 435px;
 }
 
 /* ====================== Benefits ============================ */
@@ -395,11 +396,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* width: 100%; */
-  height: 691px;
+  /* height: 691px; */
+  width: 92.2%;
+  /* width: 87.438%; */
+  height: auto;
 
   margin-bottom: 50px;
-  padding-left: 112px;
+  /* padding-left: 112px; */
+  margin-left: auto;
   background: #ffffff;
 }
 
@@ -409,9 +413,9 @@
   justify-content: center;
   align-items: flex-start;
   padding: 0px;
-  margin-top: 124px;
+  /* margin-top: 124px; */
   /* margin-left: 112px; */
-  margin-bottom: 279px;
+  /* margin-bottom: 279px; */
 }
 
 .benefits_content {
@@ -464,13 +468,22 @@
 }
 
 .benefits_helperText_2 > p > span {
-  background: -webkit-linear-gradient(
+  /* background: -webkit-linear-gradient(
     0deg,
     #2ca2b4 32.41%,
     #5598de 39.42%,
     #7f87ff 45.9%,
     #f65aad 51.83%,
     rgba(236, 61, 67, 0.954327) 58.3%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  background: linear-gradient(
+    90deg,
+    rgba(44, 162, 180, 1) 14%,
+    rgba(109, 143, 241, 1) 42%,
+    rgba(245, 88, 163, 1) 70%,
+    rgba(237, 70, 76, 1) 80%
   );
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -533,6 +546,9 @@
 }
 
 .benefits_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 720px;
   height: 691px;
   left: 720px;
@@ -544,6 +560,7 @@
 .benefits_content_btn_diff {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: flex-start;
   padding: 0px;
   gap: 16px;
@@ -551,6 +568,6 @@
   width: 608px;
   height: 412px;
 
-  margin-top: 124px;
-  margin-bottom: 279px;
+  /* margin-top: 124px; */
+  /* margin-bottom: 279px; */
 }

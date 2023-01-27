@@ -51,7 +51,7 @@
 }
 
 .smifi_users_card_normal {
-  position: absolute;
+  position: relative;
   width: 355.07px;
   height: 251.21px;
   margin-top: -252px;
@@ -74,18 +74,15 @@
 
 .smifi_users_card_user_review {
   width: 312.46px;
-  height: 125px;
-
-  margin-top: 21.3px;
-  margin-left: 21.3px;
-
+  height: 137px;
+  padding-top: 17px;
+  margin-top: -216.7px;
+  margin-left: 23.299999999999997px;
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 15.9782px;
   line-height: 25px;
-  /* or 156% */
-
   color: #222222;
 }
 

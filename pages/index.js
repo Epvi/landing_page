@@ -1,4 +1,5 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
+// import Image from "next/image";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -211,6 +212,7 @@ function VideoBox() {
         <div className={associatesStyles.videoBox_frame_link}>
           <div className={associatesStyles.videoBox_frame}>
             <iframe
+              className={associatesStyles.videoBox_frame_responsiv_iframe}
               width="884"
               height="446"
               src={`https://www.youtube.com/embed/${embedId}`}
@@ -389,9 +391,7 @@ function ApplicationFeatures() {
         </div>
       </div>
       {/*  2nd */}
-      <div
-        className={`${ourAppStyles.appFeature_1_container} ${ourAppStyles.appFeature_2_container}`}
-      >
+      <div className={ourAppStyles.appFeature_1_container}>
         <div className={ourAppStyles.appFeature_1_content_btn}>
           <div className={ourAppStyles.appFeature_1_content}>
             <div className={ourAppStyles.appFeature_1_text_1}>
@@ -425,7 +425,7 @@ function ApplicationFeatures() {
             src="/our_app_feature_2.png"
             alt="our_app_feature_2 Image"
             width="640"
-            height="541"
+            height="542"
           />
         </div>
       </div>
@@ -629,7 +629,7 @@ function HelperTextSuperpower() {
         <div className={styles.superpower_designImg_text}>
           <div className={styles.superpower_imgLeft}>
             <Image
-              src="/design_left.png"
+              src="/design_dots.png"
               alt="left_side_design"
               width="170"
               height="70"
@@ -647,20 +647,24 @@ function HelperTextSuperpower() {
           </div>
           <div className={styles.superpower_imgRight}>
             <Image
-              src="/design_right.png"
+              src="/design_dots.png"
               alt="right_side_design"
               width="170"
               height="70"
             />
           </div>
         </div>
-        <div className={styles.superpower_smifi_image}>
-          <Image
-            src="/Smi-Fi_box_front_1.png"
-            alt="Smifi device Image"
-            width="455"
-            height="435"
-          />
+        <div className={styles.superpower_smifi_image_box}>
+          <div className={styles.superpower_smifi_image}>
+            <Image
+              src="/Smi-Fi_box_front_1.png"
+              alt="Smifi device Image"
+              layout="fill"
+              objectFit="contain"
+              // width="455"
+              // height="435"
+            />
+          </div>
         </div>
       </div>
     </>
@@ -672,7 +676,7 @@ function Features() {
   return (
     <>
       <div className={styles.features_container}>
-        <div className={styles.features_frame1}>
+        <div className={styles.features_frame}>
           <div className={styles.features_frame1_img}>
             <Image
               src="/features_frame1.png"
@@ -686,7 +690,7 @@ function Features() {
             electricity usage.
           </div>
         </div>
-        <div className={styles.features_frame2}>
+        <div className={styles.features_frame}>
           <div className={styles.features_frame2_img}>
             <Image
               src="/features_frame2.png"
@@ -700,7 +704,7 @@ function Features() {
             appliances remotely.
           </div>
         </div>
-        <div className={styles.features_frame3}>
+        <div className={styles.features_frame}>
           <div className={styles.features_frame3_img}>
             <Image
               src="/features_frame3.png"
@@ -758,12 +762,12 @@ function GetSmifi() {
             </div>
           </div>
         </div>
-        <div className={styles.picture4_1}>
+        <div className={styles.getSmifi_mobileApp_device}>
           <Image
             src="/Picture4 _1.png"
-            width="550"
-            height="506"
             alt="Smi-fi and App"
+            layout="fill"
+            objectFit="contain"
           />
         </div>
       </div>
