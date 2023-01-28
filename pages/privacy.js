@@ -15,10 +15,10 @@ const Privacy = () => {
             </Link>
           </div>
           <div className={styles.privacy_heading}>
-            <p>PRIVACY POLICY</p>
+            <div>PRIVACY POLICY</div>
           </div>
           <div className={styles.privacy_inside_p}>
-            <p>
+            <div>
               <span>
                 This privacy policy (&ldquo;<strong>Privacy Policy</strong>
                 &rdquo;) sets forth the commitment of EPVI New Technological
@@ -66,9 +66,9 @@ const Privacy = () => {
                   their entirety before You use the Platform.&nbsp;
                 </span>
               </span>
-            </p>
+            </div>
             <br />
-            <p>
+            <div>
               <span>
                 EPVI has created this Policy to demonstrate its commitment
                 towards the Information Technology Act, 2000 read with the
@@ -95,17 +95,17 @@ const Privacy = () => {
                 may happen to that information.
               </span>
               <br />
-            </p>
+            </div>
           </div>
           <div className={styles.privacy_question_answer}>
             <div>
               <div className={styles.privacy_inside_p}>
                 {/* Q1 */}
                 <>
-                  <p className={styles.privacy_question}>
+                  <div className={styles.privacy_question}>
                     <span>What Personal Information do We collect?</span>
-                  </p>
-                  <p>
+                  </div>
+                  <div>
                     <span>
                       For the purpose of using the Platform and making available
                       the services provided through the Platform, We collect
@@ -123,144 +123,141 @@ const Privacy = () => {
                     </span>
                     <br />
                     <br />
-                  </p>
-                  <div>
-                    <p>
-                      <strong>
-                        <span>Information You provide to us</span>
-                      </strong>
-                      <br />
-                    </p>
-                    <p>
-                      <span>
-                        When You use Our Platform, We may ask You to provide
-                        with certain information that can be used to identify
-                        You or contact You. We collect the minimum information
-                        for the functioning of Our Platform which includes you
-                        first name and last name with salutation, Email address
-                        and other contact information. We may also ask You to
-                        provide Your residential address and/ or other address
-                        details for the purpose of visiting Your address and
-                        installing Our product.
-                      </span>
-                      <br />
-                      <br />
-                      <span>
-                        In general, You can browse the Platform without telling
-                        Us who You are or revealing any Personal Information
-                        about Yourself. However, in order to fully avail the
-                        services and features of the Platform, You will need to
-                        register on the Platform and share with Us minimum
-                        information which may also include Your contact number
-                        and identity information and other personal information
-                        as indicated on the forms throughout the Platform and
-                        complete the Registration Process. You will be required
-                        to complete the Registration Process by entering the One
-                        Time Password (OTP) generated and delivered through SMS
-                        on the phone number shared by You. You always have the
-                        option to not provide information by choosing not to use
-                        a particular service or feature on the Platform unless
-                        We require it so.
-                      </span>
-                    </p>
-                    <br />
-                    <p>
-                      <strong>
-                        <span>Information We collect about You</span>
-                      </strong>
-                    </p>
-                    <p>
-                      <span>
-                        When You use Our Platform, We automatically collect
-                        information about Your device, including Your IP
-                        address, information about Your visit (including how You
-                        got to the Platform) and how You use Our services. We
-                        may combine this information with other information You
-                        have provided to Us or which We have received from other
-                        sources. At the time of installation of our products at
-                        Your address, We manually enter the details of your
-                        electrical appliances on Our Platform for identification
-                        purposes and once You start using our product/services,
-                        We regularly collect and use the information regarding
-                        Your appliances for providing our services effectively.
-                      </span>
-                      <br />
-                      <br />
-                      <span>
-                        You agree that if You or any third-party shares
-                        correspondences with Us in any electronic form such as
-                        emails, online redressal system, letters etc.,
-                        containing Your Personal Information, We may collect or
-                        store the same, as part of Your query/query resolution
-                        or for other purposes as mentioned in this Privacy
-                        Policy.
-                      </span>
-                    </p>
-                    <br />
-                    <p>
-                      <strong>
-                        <span>Information We receive from other sources</span>
-                      </strong>
-                      <span>
-                        <a
-                          href="#_msocom_3"
-                          id="_anchor_3"
-                          language="JavaScript"
-                          name="_msoanchor_3"
-                        >
-                          [US3]
-                        </a>
-                        &nbsp;
-                      </span>
-                    </p>
-                    <p>
-                      <span>
-                        We work closely with third parties (for example,
-                        business partners, advertising networks, analytics
-                        providers and search information providers) and may
-                        receive information about You from them. This could
-                        include socio-demographic information and information
-                        about Your likely interests based on Your previous web
-                        browsing and purchases.
-                      </span>
-
-                      <span>
-                        We also get information about You from other third
-                        parties wherever permitted by Applicable Law. For
-                        example, We receive information from:
-                      </span>
-
-                      <ul>
-                        <li>
-                          <span>
-                            third parties with whom You have an account or
-                            receive a service when You choose to sync that
-                            third-party account/service with Your&nbsp;
-                          </span>
-                          <span>EPVI</span>
-                          <span>
-                            &nbsp;account, or integrate Your data from that
-                            third-party into the services We provide to You;
-                          </span>
-                        </li>
-                        <li>
-                          <span>
-                            third-party service providers who help Us to
-                            supplement the information You have provided and to
-                            ensure the accuracy of Your Information; and
-                          </span>
-                        </li>
-                        <li>
-                          <span>
-                            third parties who provide Us with Information about
-                            You or Your interaction with Our services.
-                          </span>
-                        </li>
-                      </ul>
-                      <br />
-                    </p>
                   </div>
-                  <p>
+                  <div>
+                    <strong>
+                      <span>Information You provide to us</span>
+                    </strong>
+                    <br />
+                  </div>
+                  <div>
+                    <span>
+                      When You use Our Platform, We may ask You to provide with
+                      certain information that can be used to identify You or
+                      contact You. We collect the minimum information for the
+                      functioning of Our Platform which includes you first name
+                      and last name with salutation, Email address and other
+                      contact information. We may also ask You to provide Your
+                      residential address and/ or other address details for the
+                      purpose of visiting Your address and installing Our
+                      product.
+                    </span>
+                    <br />
+                    <br />
+                    <span>
+                      In general, You can browse the Platform without telling Us
+                      who You are or revealing any Personal Information about
+                      Yourself. However, in order to fully avail the services
+                      and features of the Platform, You will need to register on
+                      the Platform and share with Us minimum information which
+                      may also include Your contact number and identity
+                      information and other personal information as indicated on
+                      the forms throughout the Platform and complete the
+                      Registration Process. You will be required to complete the
+                      Registration Process by entering the One Time Password
+                      (OTP) generated and delivered through SMS on the phone
+                      number shared by You. You always have the option to not
+                      provide information by choosing not to use a particular
+                      service or feature on the Platform unless We require it
+                      so.
+                    </span>
+                  </div>
+                  <br />
+                  <div>
+                    <strong>
+                      <span>Information We collect about You</span>
+                    </strong>
+                  </div>
+                  <div>
+                    <span>
+                      When You use Our Platform, We automatically collect
+                      information about Your device, including Your IP address,
+                      information about Your visit (including how You got to the
+                      Platform) and how You use Our services. We may combine
+                      this information with other information You have provided
+                      to Us or which We have received from other sources. At the
+                      time of installation of our products at Your address, We
+                      manually enter the details of your electrical appliances
+                      on Our Platform for identification purposes and once You
+                      start using our product/services, We regularly collect and
+                      use the information regarding Your appliances for
+                      providing our services effectively.
+                    </span>
+                    <br />
+                    <br />
+                    <span>
+                      You agree that if You or any third-party shares
+                      correspondences with Us in any electronic form such as
+                      emails, online redressal system, letters etc., containing
+                      Your Personal Information, We may collect or store the
+                      same, as part of Your query/query resolution or for other
+                      purposes as mentioned in this Privacy Policy.
+                    </span>
+                  </div>
+                  <br />
+                  <div>
+                    <strong>
+                      <span>Information We receive from other sources</span>
+                    </strong>
+                    <span>
+                      <a
+                        href="#_msocom_3"
+                        id="_anchor_3"
+                        language="JavaScript"
+                        name="_msoanchor_3"
+                      >
+                        [US3]
+                      </a>
+                      &nbsp;
+                    </span>
+                  </div>
+                  <div>
+                    <span>
+                      We work closely with third parties (for example, business
+                      partners, advertising networks, analytics providers and
+                      search information providers) and may receive information
+                      about You from them. This could include socio-demographic
+                      information and information about Your likely interests
+                      based on Your previous web browsing and purchases.
+                    </span>
+
+                    <span>
+                      We also get information about You from other third parties
+                      wherever permitted by Applicable Law. For example, We
+                      receive information from:
+                    </span>
+
+                    <ul>
+                      <li>
+                        <span>
+                          third parties with whom You have an account or receive
+                          a service when You choose to sync that third-party
+                          account/service with Your&nbsp;
+                        </span>
+                        <span>EPVI</span>
+                        <span>
+                          &nbsp;account, or integrate Your data from that
+                          third-party into the services We provide to You;
+                        </span>
+                      </li>
+                      <li>
+                        <span>
+                          third-party service providers who help Us to
+                          supplement the information You have provided and to
+                          ensure the accuracy of Your Information; and
+                        </span>
+                      </li>
+                      <li>
+                        <span>
+                          third parties who provide Us with Information about
+                          You or Your interaction with Our services.
+                        </span>
+                      </li>
+                    </ul>
+                    <br />
+                  </div>
+
+                  <div>
                     <span>
                       We take utmost care and caution to ensure that Your
                       Personal Information is safe and not put up for any sort
@@ -284,14 +281,14 @@ const Privacy = () => {
                       data, data concerning health or data concerning a natural
                       person&apos;s sex life or sexual orientation.
                     </span>
-                  </p>
+                  </div>
                 </>
                 {/* Q2 */}
                 <>
-                  <p className={styles.privacy_question}>
+                  <div className={styles.privacy_question}>
                     <span>How do We use Your Personal Information?</span>
-                  </p>
-                  <p>
+                  </div>
+                  <div>
                     <span>
                       We use Personal Information for specific and legitimate
                       purposes, connected with serving You and operating Our
@@ -301,7 +298,7 @@ const Privacy = () => {
                       by combining the data We have about You. In addition, We
                       use Your Personal Information for the following purposes:
                     </span>
-                  </p>
+                  </div>
                   <ul>
                     <li>
                       <span>
@@ -382,10 +379,10 @@ const Privacy = () => {
                 </>
                 {/* Q3 */}
                 <>
-                  <p className={styles.privacy_question}>
+                  <div className={styles.privacy_question}>
                     <span>Why can We use Your Personal Information?</span>
-                  </p>
-                  <p>
+                  </div>
+                  <div>
                     <span>
                       Sometimes We ask for Your consent, like when You subscribe
                       to an email. Other times, We don&apos;t ask Your
@@ -395,7 +392,7 @@ const Privacy = () => {
                       purposes described above will typically be one of the
                       following:
                     </span>
-                  </p>
+                  </div>
                   <ul>
                     <li>
                       <span>
@@ -436,7 +433,7 @@ const Privacy = () => {
                       </span>
                     </li>
                   </ul>
-                  <p>
+                  <div>
                     <span>
                       Where You provide Us with special category data or
                       Sensitive Personal Data (for example, information about
@@ -444,14 +441,14 @@ const Privacy = () => {
                       driving offences), We will seek Your explicit consent to
                       process this information.
                     </span>
-                  </p>
+                  </div>
                 </>
                 {/* Q4 */}
                 <>
-                  <p className={styles.privacy_question}>
+                  <div className={styles.privacy_question}>
                     <span>Who do We share Your Personal Information with?</span>
-                  </p>
-                  <p>
+                  </div>
+                  <div>
                     <span>
                       Information about Our Customers is an important part of
                       Our business, and We are not in the business of selling
@@ -459,19 +456,19 @@ const Privacy = () => {
                       rule, We do not share Your data with any third-party apart
                       from the following mentions:
                     </span>
-                  </p>
+                  </div>
                   <br />
-                  <p>
+                  <div>
                     <strong>
                       <span>Legal Requirements</span>
                     </strong>
-                  </p>
-                  <p>
+                  </div>
+                  <div>
                     <span>
                       We may disclose Your Personal Information in good faith
                       that such action is necessary to:
                     </span>
-                  </p>
+                  </div>
                   <ul>
                     <li>
                       <span>To comply with a legal obligation;</span>
@@ -495,12 +492,12 @@ const Privacy = () => {
                     </li>
                   </ul>
                   <br />
-                  <p>
+                  <div>
                     <strong>
                       <span>Google Analytics</span>
                     </strong>
-                  </p>
-                  <p>
+                  </div>
+                  <div>
                     <span>
                       Google Analytics is a web analytics service offered by
                       Google that tracks and reports website traffic. Google
@@ -510,8 +507,8 @@ const Privacy = () => {
                       contextualize and personalize the ads of its own
                       advertising network.
                     </span>
-                  </p>
-                  <p>
+                  </div>
+                  <div>
                     <span>
                       You can opt-out of having made Your activity on the
                       Platform available to Google Analytics by installing the
@@ -520,15 +517,15 @@ const Privacy = () => {
                       analytics.js, and dc.js) from sharing information with
                       Google Analytics about visits activity.
                     </span>
-                  </p>
+                  </div>
                   <br />
-                  <p>
+                  <div>
                     <strong>
                       <span>Third-party service providers</span>
                     </strong>
                     <span>&nbsp;</span>
-                  </p>
-                  <p>
+                  </div>
+                  <div>
                     <span>
                       We employ other companies and individuals to perform
                       functions on Our behalf. Examples include fulfilling
@@ -547,31 +544,31 @@ const Privacy = () => {
                       Your instructions or using the login/ registration/ OTP
                       details provided to Us by You.
                     </span>
-                  </p>
+                  </div>
                   <br />
-                  <p>
+                  <div>
                     <strong>
                       <span>
                         Advertisers and advertising networks: to serve relevant
                         adverts to You and others
                       </span>
                     </strong>
-                  </p>
-                  <p>
+                  </div>
+                  <div>
                     <span>
                       We may provide Your Personal Information to Our partner
                       advertisers and advertising networks that require that
                       information to select and serve relevant adverts to You
                       and others.
                     </span>
-                  </p>
+                  </div>
                   <br />
-                  <p>
+                  <div>
                     <strong>
                       <span>If We sell or buy any business or assets</span>
                     </strong>
-                  </p>
-                  <p>
+                  </div>
+                  <div>
                     <span>
                       If We sell or buy any business or assets, We may disclose
                       Your Personal Information to the prospective seller or
@@ -580,27 +577,27 @@ const Privacy = () => {
                       its assets) is acquired, Personal Information held by it
                       about its Users will be one of the transferred assets.
                     </span>
-                  </p>
+                  </div>
                   <br />
-                  <p>
+                  <div>
                     <strong>
                       <span>To obtain professional advice</span>
                     </strong>
-                  </p>
-                  <p>
+                  </div>
+                  <div>
                     <span>
                       We may disclose Your Personal Information to obtain
                       professional advice (for example, from lawyers or
                       financial advisors).
                     </span>
-                  </p>
+                  </div>
                 </>
                 {/* Q4 */}
                 <>
-                  <p className={styles.privacy_question}>
+                  <div className={styles.privacy_question}>
                     <span>How do We store Your Personal Information?</span>
-                  </p>
-                  <p>
+                  </div>
+                  <div>
                     <span>
                       We follow industry best practices to protect Your Personal
                       Information. We only keep Your information when We need it
@@ -637,9 +634,9 @@ const Privacy = () => {
                       , Your ID and Password or Your phone number and the
                       generated OTP are required to access Your Account.
                     </span>
-                  </p>
+                  </div>
                   <br />
-                  <p>
+                  <div>
                     <span>
                       Unfortunately, transmission of information over the
                       internet is not completely secure. We will do Our best to
@@ -649,20 +646,20 @@ const Privacy = () => {
                       use strict procedures and security features to try to
                       prevent unauthorised access.
                     </span>
-                  </p>
+                  </div>
                 </>
                 {/* Q5 */}
                 <>
-                  <p className={styles.privacy_question}>
+                  <div className={styles.privacy_question}>
                     <span>How do We use cookies?</span>
-                  </p>
-                  <p>
+                  </div>
+                  <div>
                     <strong>
                       <span>Cookies Data</span>
                     </strong>
-                  </p>
+                  </div>
                   <br />
-                  <p>
+                  <div>
                     <span>
                       &ldquo;Cookies&rdquo; are small files placed on Your hard
                       drive that assist Us in providing Our services. We use
@@ -677,10 +674,10 @@ const Privacy = () => {
                       less frequently during a session. It also helps Us provide
                       information that is targeted to Your interests.
                     </span>
-                  </p>
-                  <p>
+                  </div>
+                  <div>
                     <span>Examples of Cookies:</span>
-                  </p>
+                  </div>
                   <ul>
                     <li>
                       <span>
@@ -702,7 +699,7 @@ const Privacy = () => {
                     </li>
                   </ul>
                   <br />
-                  <p>
+                  <div>
                     <span>
                       Most cookies are session cookies, meaning that they are
                       automatically deleted from Your hard drive at the end of a
@@ -720,29 +717,29 @@ const Privacy = () => {
                       not work. These cookies do not store any Personal
                       Information.
                     </span>
-                  </p>
+                  </div>
                 </>
                 {/* Q6 */}
                 <>
-                  <p className={styles.privacy_question}>
+                  <div className={styles.privacy_question}>
                     <span>What are Your data rights?</span>
-                  </p>
-                  <p>
+                  </div>
+                  <div>
                     <span>
                       Right to withdraw consent: Where You have given us
                       permission to process Your Personal Information, You may
                       withdraw Your consent with effect for the future.
                     </span>
-                  </p>
+                  </div>
                   <br />
-                  <p>
+                  <div>
                     <span>
                       Right to erasure: You have the right to request that We
                       delete applicable Personal Information We process about
                       You. We must comply with this request, unless processing
                       is necessary:
                     </span>
-                  </p>
+                  </div>
                   <ul>
                     <li>
                       <span>
@@ -770,7 +767,7 @@ const Privacy = () => {
                     </li>
                   </ul>
                   <br />
-                  <p>
+                  <div>
                     <span>
                       Right to rectification: You have the right to request
                       rectification of incorrect or incomplete Personal
@@ -779,17 +776,17 @@ const Privacy = () => {
                       and relevant, based on the most recent information
                       available to Us.
                     </span>
-                  </p>
+                  </div>
                   <br />
-                  <p>
+                  <div>
                     <span>
                       Right to restriction: In some circumstances, You may
                       obtain from Us restriction of processing of Your Personal
                       Information.
                     </span>
-                  </p>
+                  </div>
                   <br />
-                  <p>
+                  <div>
                     <span>
                       Right to object: You may object to the processing of Your
                       Personal Information, when it is based on Our legitimate
@@ -799,9 +796,9 @@ const Privacy = () => {
                       overriding interest for the processing or for the
                       establishment, exercise or defense of legal claims.
                     </span>
-                  </p>
+                  </div>
                   <br />
-                  <p>
+                  <div>
                     <span>
                       Right to access Your Personal Information: You may ask
                       from Us information regarding Personal Information that We
@@ -811,16 +808,16 @@ const Privacy = () => {
                       vary depending on the nature of the information We hold
                       about You).
                     </span>
-                  </p>
+                  </div>
                   <br />
-                  <p>
+                  <div>
                     <span>
                       Right to portability: You have the right to request that
                       We transmit Your Personal Information (that You have
                       provided to Us) to another organisation (data
                       portability), if:
                     </span>
-                  </p>
+                  </div>
                   <ul>
                     <li>
                       <span>
@@ -849,7 +846,7 @@ const Privacy = () => {
                     </li>
                   </ul>
                   <br />
-                  <p>
+                  <div>
                     <span>
                       Right to lodge a complaint: You can lodge a complaint with
                       the relevant data protection authority of Your
@@ -857,14 +854,14 @@ const Privacy = () => {
                       contact Us to try and solve Your problem &ndash; You can
                       find Our contact details below.
                     </span>
-                  </p>
+                  </div>
                 </>
                 {/* Q7 */}
                 <>
-                  <p className={styles.privacy_question}>
+                  <div className={styles.privacy_question}>
                     <span>Links to thirty party websites</span>
-                  </p>
-                  <p>
+                  </div>
+                  <div>
                     <span>
                       Our Platform may contain links to other websites. Please
                       note that when You click on one of these links, You are
@@ -877,14 +874,14 @@ const Privacy = () => {
                       privacy of Personal Information or loss incurred by Your
                       use of these websites.
                     </span>
-                  </p>
+                  </div>
                 </>
                 {/* Q8 */}
                 <>
-                  <p className={styles.privacy_question}>
+                  <div className={styles.privacy_question}>
                     <span>Opt-Out</span>
-                  </p>
-                  <p>
+                  </div>
+                  <div>
                     <span>
                       Wherever the Platform relies on Your consent, You will
                       always be able to withdraw that consent, however, please
@@ -896,14 +893,14 @@ const Privacy = () => {
                       profiling We carry out for direct marketing, at any time.
                       You can do this by contacting Us.
                     </span>
-                  </p>
+                  </div>
                 </>
                 {/* Q9 */}
                 <>
-                  <p className={styles.privacy_question}>
+                  <div className={styles.privacy_question}>
                     <span>Governing law and Dispute Resolution</span>
-                  </p>
-                  <p>
+                  </div>
+                  <div>
                     <span>
                       This Privacy Policy shall be governed by and constructed
                       in accordance with the laws of India only without
@@ -923,14 +920,14 @@ const Privacy = () => {
                       &nbsp;
                     </span>
                     <span>, India.</span>
-                  </p>
+                  </div>
                 </>
                 {/* Q10 */}
                 <>
-                  <p className={styles.privacy_question}>
+                  <div className={styles.privacy_question}>
                     <span>Assignability</span>
-                  </p>
-                  <p>
+                  </div>
+                  <div>
                     <span>
                       EPVI may assign any of its responsibilities/obligations to
                       any other person without notice to the User, at its sole
@@ -939,14 +936,14 @@ const Privacy = () => {
                       Policy to any other party, unless a written consent is
                       taken from EPVI.
                     </span>
-                  </p>
+                  </div>
                 </>
                 {/* Q11 */}
                 <>
-                  <p className={styles.privacy_question}>
+                  <div className={styles.privacy_question}>
                     <span>Changes to this Privacy Policy</span>
-                  </p>
-                  <p>
+                  </div>
+                  <div>
                     <span>
                       As We update, improve and expand the services, this
                       Privacy Policy may change, so please refer back to it
@@ -957,14 +954,14 @@ const Privacy = () => {
                       services that We offer or for other reasons as mentioned
                       in this Privacy Policy.
                     </span>
-                  </p>
+                  </div>
                 </>
                 {/* Q12 */}
                 <>
-                  <p className={styles.privacy_question}>
+                  <div className={styles.privacy_question}>
                     <span>Contact Us&nbsp;</span>
-                  </p>
-                  <p>
+                  </div>
+                  <div>
                     <span>
                       If You have any questions about or issues related to this
                       Privacy Policy, the privacy practices of the Platform, or
@@ -994,29 +991,29 @@ const Privacy = () => {
                       Nagar, Fatehabad Haryana &ndash; 125050, India
                     </span>
                     <span>.&nbsp;</span>
-                  </p>
+                  </div>
                   <br />
-                  <p>
+                  <div>
                     <span>
                       You may also contact Our Grievance Officer/Data Protection
                       Officer on details mentioned below:
                     </span>
-                  </p>
+                  </div>
                   <br />
-                  <p>
+                  <div>
                     <span>Name: Bharat Kumar</span>
-                  </p>
-                  <p>
+                  </div>
+                  <div>
                     <span>Designation: Director/ Grievance Officer</span>
-                  </p>
-                  <p>
+                  </div>
+                  <div>
                     <span>Email:&nbsp;</span>
                     <a href="mailto:ceo@epviindia.com">
                       <span>ceo@epviindia.com</span>
                     </a>
                     <span>&nbsp;</span>
-                  </p>
-                  <p>
+                  </div>
+                  <div>
                     <span>Postal Address:&nbsp;</span>
                     <span>
                       House No. 86. Block No. 4, Gali Sdo Kitab Singh, Shiv
@@ -1033,28 +1030,28 @@ const Privacy = () => {
                       </a>
                       &nbsp;
                     </span>
-                  </p>
-                  <p>
+                  </div>
+                  <div>
                     <span>&nbsp;</span>
-                  </p>
+                  </div>
                   <div id="_com_1" language="JavaScript">
-                    <p>
+                    <div>
                       <span>
                         &nbsp;<a href="#_msoanchor_1">[US1]</a>
                       </span>
                       To include all websites
-                    </p>
+                    </div>
                   </div>
                   <div id="_com_2" language="JavaScript">
-                    <p>
+                    <div>
                       <span>
                         &nbsp;<a href="#_msoanchor_2">[US2]</a>
                       </span>
                       To be confirmed
-                    </p>
+                    </div>
                   </div>
                   <div id="_com_3" language="JavaScript">
-                    <p>
+                    <div>
                       <span>
                         &nbsp;<a href="#_msoanchor_3">[US3]</a>
                       </span>
@@ -1062,39 +1059,39 @@ const Privacy = () => {
                       party affiliates, however, it may enter into arrangements
                       with third parties in future and this section may be
                       retained for such purposes.
-                    </p>
+                    </div>
                   </div>
                   <div id="_com_4" language="JavaScript">
-                    <p>
+                    <div>
                       <span>
                         &nbsp;<a href="#_msoanchor_4">[US4]</a>
                       </span>
                       To be confirmed
-                    </p>
+                    </div>
                   </div>
                   <div id="_com_5" language="JavaScript">
-                    <p>
+                    <div>
                       <span>
                         &nbsp;<a href="#_msoanchor_5">[US5]</a>
                       </span>
                       To be confirmed
-                    </p>
+                    </div>
                   </div>
                   <div id="_com_6" language="JavaScript">
-                    <p>
+                    <div>
                       <span>
                         &nbsp;<a href="#_msoanchor_6">[US6]</a>
                       </span>
                       To be confirmed
-                    </p>
+                    </div>
                   </div>
                   <div id="_com_7" language="JavaScript">
-                    <p>
+                    <div>
                       <span>
                         &nbsp;<a href="#_msoanchor_7">[US7]</a>
                       </span>
                       To be confirmed
-                    </p>
+                    </div>
                   </div>
                 </>
               </div>
