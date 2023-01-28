@@ -49,14 +49,15 @@
 /* =============   Our App Features =======================*/
 
 .appFeature_1_container {
+  width: 85%;
+  margin: auto;
   display: flex;
   /* justify-content: space-around; */
   justify-content: space-between;
   /* margin-top: 117px; */
-
-  padding-top: 97px;
-  padding-left: 112px;
-  padding-right: 209px;
+  margin-top: 97px;
+  /* padding-left: 112px; */
+  /* padding-right: 209px; */
 }
 
 .appFeature_1_content_btn {
@@ -174,6 +175,18 @@
   background: linear-gradient(55.05deg, #5cc0df 6.54%, #7692fa 89.18%);
   border-radius: 50px;
 }
+.appFeature_1_frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.appFeature_2_frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: -7%;
+}
+
 
 .appFeature_2_container {
   padding-right: 112px;

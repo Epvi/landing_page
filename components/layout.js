@@ -1,4 +1,5 @@
-import Image from "next/image";
+// import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import styles from "../styles/Layout.module.css";
 
@@ -16,26 +17,19 @@ export const Navbar = () => {
   return (
     <>
       <div className={styles.navContainer}>
-        <div className={styles.navContent}>
-          <div className={styles.logoBlock}>
-            <Image
-              src="/LogoBlock.png"
-              alt="Epvi-Logo"
-              width="95"
-              height="32"
-            />
-          </div>
-          <div className={styles.navLinks}>
-            <Link href="">Our Product</Link>
-            <Link href="">Our App</Link>
-            <Link href="">FAQ</Link>
-            <Link href="">Blogs</Link>
-            <Link href="">About</Link>
-          </div>
-          <div className={styles.navActions}>
-            <button id={styles.btn1}>Contact Us</button>
-            <button id={styles.btn2}>Get Smi-Fi</button>
-          </div>
+        <div className={styles.logoBlock}>
+          <Image src="/LogoBlock.png" alt="Epvi-Logo" width="95" height="32" />
+        </div>
+        <div className={styles.navLinks}>
+          <Link href="">Our Product</Link>
+          <Link href="">Our App</Link>
+          <Link href="">FAQ</Link>
+          <Link href="">Blogs</Link>
+          <Link href="">About</Link>
+        </div>
+        <div className={styles.navActions}>
+          <button id={styles.btn1}>Contact Us</button>
+          <button id={styles.btn2}>Get Smi-Fi</button>
         </div>
       </div>
     </>
@@ -52,8 +46,8 @@ export const Footer = () => {
             <Image
               src="/hr_tag_design.png"
               alt="hr Tag design"
-              width="1100"
-              height="8"
+              layout="fill"
+              objectFit="cover"
             />
           </div>
           <div className={styles.footer_content}>
@@ -87,7 +81,9 @@ export const Footer = () => {
                   <Link href="">Terms of Use</Link>
                 </div>
                 <div className={styles.footer_content_helper_links_txt}>
-                  <Link href="">Privacy Policy</Link>
+                  <Link href="">
+                    Privacy Policy
+                  </Link>
                 </div>
                 <div className={styles.footer_content_helper_links_txt}>
                   <Link href="">Report</Link>
