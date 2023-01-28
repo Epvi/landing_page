@@ -81,9 +81,7 @@ export const Footer = () => {
                   <Link href="">Terms of Use</Link>
                 </div>
                 <div className={styles.footer_content_helper_links_txt}>
-                  <Link href="">
-                    Privacy Policy
-                  </Link>
+                  <Link href="/privacy">Privacy Policy</Link>
                 </div>
                 <div className={styles.footer_content_helper_links_txt}>
                   <Link href="">Report</Link>
