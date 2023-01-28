@@ -1,7 +1,6 @@
 .main {
   margin-top: 80px;
   width: 100%;
-  /* height: fit-content; */
   left: 0px;
   top: 122px;
   background: #ffffff;
@@ -15,7 +14,6 @@
   align-items: center;
   padding: 0px;
   width: 80%;
-  /* height: 506px; */
   height: fit-content;
 }
 
@@ -41,8 +39,6 @@
 
   height: fit-content;
 
-  /* Inside auto layout */
-
   flex: none;
   order: 0;
   flex-grow: 0;
@@ -54,9 +50,6 @@
   align-items: flex-start;
   padding: 0px;
   gap: 12px;
-
-  /* width: 649px;
-  height: 144px; */
   width: inherit;
   height: fit-content;
 }
@@ -79,8 +72,6 @@
 .getSmifi_smarterHomes {
   max-width: 652.39px;
   height: inherit;
-  /* width: 642px;
-  height: 112px; */
 
   font-family: "Montserrat";
   font-style: normal;
@@ -102,34 +93,27 @@
 .getSmifi_smarterHomes > p > span {
   background: linear-gradient(
     90deg,
-    rgba(44, 162, 180, 1) 14%,
-    rgba(109, 143, 241, 1) 42%,
-    rgba(245, 88, 163, 1) 69%,
-    rgba(237, 70, 76, 1) 80%
+    rgba(44, 162, 180, 1) 13%,
+    rgba(109, 143, 241, 1) 35%,
+    rgba(245, 88, 163, 1) 60%,
+    rgba(237, 70, 76, 1) 100%
   );
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .supportText {
-  /* width: 488px; */
   width: inherit;
-  /* height: 28px; */
   height: inherit;
-
-  /* Paragraph/Large/Regular */
 
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
-  /* identical to box height, or 156% */
 
   display: flex;
   align-items: center;
-
-  /* Neutral/700 */
 
   color: #404040;
 }
@@ -387,7 +371,7 @@
 
 /* ====================== Benefits ============================ */
 
-.benefits_container {
+/* .benefits_container {
   margin-top: 150px;
   height: 2173px;
 }
@@ -396,13 +380,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* height: 691px; */
   width: 92.2%;
-  /* width: 87.438%; */
   height: auto;
 
   margin-bottom: 50px;
-  /* padding-left: 112px; */
   margin-left: auto;
   background: #ffffff;
 }
@@ -413,9 +394,6 @@
   justify-content: center;
   align-items: flex-start;
   padding: 0px;
-  /* margin-top: 124px; */
-  /* margin-left: 112px; */
-  /* margin-bottom: 279px; */
 }
 
 .benefits_content {
@@ -426,7 +404,6 @@
   gap: 24px;
 
   max-width: 100%;
-  /* width: 156%; */
   height: 247px;
 }
 
@@ -439,7 +416,6 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
-  /* identical to box height, or 143% */
 
   display: flex;
   align-items: center;
@@ -458,7 +434,6 @@
   font-weight: 800;
   font-size: 52px;
   line-height: 56px;
-  /* or 108% */
 
   display: flex;
   align-items: center;
@@ -468,22 +443,12 @@
 }
 
 .benefits_helperText_2 > p > span {
-  /* background: -webkit-linear-gradient(
-    0deg,
-    #2ca2b4 32.41%,
-    #5598de 39.42%,
-    #7f87ff 45.9%,
-    #f65aad 51.83%,
-    rgba(236, 61, 67, 0.954327) 58.3%
-  );
-  background-clip: text;
-  -webkit-text-fill-color: transparent; */
   background: linear-gradient(
     90deg,
-    rgba(44, 162, 180, 1) 14%,
-    rgba(109, 143, 241, 1) 42%,
-    rgba(245, 88, 163, 1) 70%,
-    rgba(237, 70, 76, 1) 80%
+    rgba(44, 162, 180, 1) 13%,
+    rgba(109, 143, 241, 1) 30%,
+    rgba(245, 88, 163, 1) 55%,
+    rgba(237, 70, 76, 1) 87%
   );
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -498,7 +463,6 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
-  /* or 156% */
 
   display: flex;
   align-items: center;
@@ -567,7 +531,4 @@
 
   width: 608px;
   height: 412px;
-
-  /* margin-top: 124px; */
-  /* margin-bottom: 279px; */
-}
+} */
