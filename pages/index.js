@@ -14,8 +14,10 @@ import safetyStyles from "../styles/Safety.module.css";
 import associatesStyles from "../styles/associates.module.css";
 import smifiUserCardsStyles from "../styles/SmifiUsersCards.module.css";
 import FaQStyles from "../styles/FaQ.module.css";
+import contactUsStyles from "../styles/ContactUs.module.css";
 
 import GetMeAccordion from "../src/GetMeAccordion";
+import GetContactUsFrom from "../src/contactForm/GetContactUsFrom";
 
 export default function Home() {
   return (
@@ -33,6 +35,94 @@ export default function Home() {
         <VideoBox />
         <HappySmifiUsers />
         <FaQ />
+        <ContactUs />
+      </div>
+    </>
+  );
+}
+
+function ContactUs() {
+  return (
+    <>
+      <div className={contactUsStyles.contact_us_container}>
+        {/* 1 */}
+        <div className={contactUsStyles.contact_us_headingTxts}>
+          <div className={contactUsStyles.contact_us_heading_head}>
+            Contact us
+          </div>
+          <div className={contactUsStyles.contact_us_heading_strong}>
+            We’d love to hear from you
+          </div>
+          <div className={contactUsStyles.contact_us_heading_light}>
+            Our friendly team is always here to chat.
+          </div>
+        </div>
+        {/* 2 */}
+        <div className={contactUsStyles.contact_us_form_container}>
+          <GetContactUsFrom />
+        </div>
+        {/* 3 */}
+        <div className={contactUsStyles.contact_us_details_container}>
+          <div className={contactUsStyles.contact_us_details_wrapper}>
+            <div className={contactUsStyles.contact_us_details}>
+              <div className={contactUsStyles.contact_us_details_img}>
+                <Image
+                  src="/details_email.png"
+                  alt="Email Image"
+                  width="48"
+                  height="48"
+                />
+              </div>
+              <div className={contactUsStyles.contact_us_details_strong}>
+                Email
+              </div>
+              <div className={contactUsStyles.contact_us_details_light}>
+                Our friendly team is here to help.
+              </div>
+              <div className={contactUsStyles.contact_us_details_blue}>
+                contactus@epviindia.com
+              </div>
+            </div>
+            <div className={contactUsStyles.contact_us_details}>
+              <div className={contactUsStyles.contact_us_details_img}>
+                <Image
+                  src="/details_office.png"
+                  alt="Email Image"
+                  width="48"
+                  height="48"
+                />
+              </div>
+              <div className={contactUsStyles.contact_us_details_strong}>
+                Office
+              </div>
+              <div className={contactUsStyles.contact_us_details_light}>
+                Come say hello at our office HQ.
+              </div>
+              <div className={contactUsStyles.contact_us_details_blue}>
+                Gurgaon 122010
+              </div>
+            </div>
+            <div className={contactUsStyles.contact_us_details}>
+              <div className={contactUsStyles.contact_us_details_img}>
+              <Image
+                  src="/details_phone.png"
+                  alt="Email Image"
+                  width="48"
+                  height="48"
+                />
+              </div>
+              <div className={contactUsStyles.contact_us_details_strong}>
+                Phone
+              </div>
+              <div className={contactUsStyles.contact_us_details_light}>
+                Mon-Fri from 8AM to 8PM
+              </div>
+              <div className={contactUsStyles.contact_us_details_blue}>
+                +91 7314852887
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
@@ -506,7 +596,9 @@ function Benefits() {
         <div className={benefitStyles.benefits_frame_content}>
           <div className={benefitStyles.benefits_content_btn}>
             <div className={benefitStyles.benefits_content}>
-              <div className={benefitStyles.benefits_helperText_1}>AUTOMATION</div>
+              <div className={benefitStyles.benefits_helperText_1}>
+                AUTOMATION
+              </div>
               <div className={benefitStyles.benefits_helperText_2}>
                 <p>
                   Upgrade your <span>home.</span>
@@ -590,7 +682,9 @@ function Benefits() {
         <div className={benefitStyles.benefits_frame_content}>
           <div className={benefitStyles.benefits_content_btn}>
             <div className={benefitStyles.benefits_content}>
-              <div className={benefitStyles.benefits_helperText_1}>AUTOMATION</div>
+              <div className={benefitStyles.benefits_helperText_1}>
+                AUTOMATION
+              </div>
               <div className={benefitStyles.benefits_helperText_2}>
                 <p>
                   Upgrade your <span>savings.</span>
