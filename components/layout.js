@@ -24,7 +24,7 @@ export const Navbar = () => {
           <Link href="">Our Product</Link>
           <Link href="">Our App</Link>
           <Link href="">FAQ</Link>
-          <Link href="">Blogs</Link>
+          <Link href="/Blog">Blogs</Link>
           <Link href="">About</Link>
         </div>
         <div className={styles.navActions}>
