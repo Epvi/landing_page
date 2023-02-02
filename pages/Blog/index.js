@@ -7,7 +7,6 @@ import {
   faMagnifyingGlass,
   faArrowDown,
   faArrowUp,
-  faArrowUpRightFromSquare,
 } from "@fortawesome/free-solid-svg-icons";
 
 import blogHomeStyles from "../../styles/BlogCss/BlogHome.module.css";
@@ -32,7 +31,7 @@ function NewsLetter() {
   const handleNewLetterMail = async (e) => {
     e.preventDefault();
     if (email != "") {
-      console.log(`Email: ${searchText}`);
+      console.log(`Email: ${email}`);
     } else {
       alert("Please enter your email");
     }
@@ -186,7 +185,12 @@ function BlogCard({ item }) {
               </div>
               <div className={cardsStyles.cards_blogInfo_title_icon}>
                 <Link href="">
-                  <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                  <Image
+                    src="/right_up_icon.png"
+                    alt="right_up_icon"
+                    width="24"
+                    height="24"
+                  />
                 </Link>
               </div>
             </div>
@@ -260,21 +264,21 @@ function BlogHeadingSection() {
       </div>
       <div className={blogHomeStyles.side_blog_images}>
         <div className={blogHomeStyles.side_blog_images_left}>
-            <Image
-              src="/left_band_design.png"
-              alt="left_band_design image"
-              width="446"
-              height="230"
-            />
-          </div>
-          <div className={blogHomeStyles.side_blog_images_right}>
-            <Image
-              src="/right_band_design.png"
-              alt="right_band_design image"
-              width="600"
-              height="250"
-            />
-          </div>
+          <Image
+            src="/left_band_design.png"
+            alt="left_band_design image"
+            width="446"
+            height="230"
+          />
+        </div>
+        <div className={blogHomeStyles.side_blog_images_right}>
+          <Image
+            src="/right_band_design.png"
+            alt="right_band_design image"
+            width="600"
+            height="250"
+          />
+        </div>
       </div>
     </>
   );
