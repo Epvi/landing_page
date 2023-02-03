@@ -127,6 +127,7 @@
 }
 .contact_us_form_btn:hover {
   box-shadow: none;
+  cursor: pointer;
 }
 
 .contact_us_form_name {
