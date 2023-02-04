@@ -70,6 +70,7 @@
 }
 
 .getSmifi_smarterHomes {
+  position: relative;
   max-width: 652.39px;
   height: inherit;
 
@@ -79,18 +80,25 @@
   font-size: 52px;
   line-height: 56px;
   letter-spacing: -0.02em;
+  background-color: #ffffff;
 
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  /* align-items: center; */
 
   color: #171717;
 }
-.getSmifi_smarterHomes p {
-  margin: 0px;
-  padding: 0px;
+
+.getSmifi_smarterHomes_allTexts {
+  margin-top: 5px;
+  height: 56px;
+  overflow: hidden;
 }
 
-.getSmifi_smarterHomes > p > span {
+.getSmifi_smarterHomes span {
+  display: block;
+  width: fit-content;
+  white-space: nowrap;
   background: linear-gradient(
     90deg,
     rgba(44, 162, 180, 1) 13%,
@@ -100,6 +108,25 @@
   );
   background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  animation: spin_words 6s infinite;
+  animation-delay: 2s;
+  animation-direction: alternate;
+}
+
+@keyframes spin_words {
+  40% {
+    transform: translateY(-112%);
+    /* transform: rotate3d(0); */
+  }
+  66% {
+    transform: translateY(-100%);
+    /* transform: rotate3d(180); */
+  }
+  100% {
+    transform: translateY(-212%);
+    /* transform: rotate3d(360); */
+  }
 }
 
 .supportText {

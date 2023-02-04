@@ -1,4 +1,5 @@
 import Image from "next/legacy/image";
+import { useEffect, useState } from "react";
 // import Image from "next/image";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -6,9 +7,12 @@ import {
   faArrowRight,
   faArrowUpRightFromSquare,
 } from "@fortawesome/free-solid-svg-icons";
+import { useInView } from "react-intersection-observer";
 
 import styles from "../styles/Home.module.css";
 import benefitStyles from "../styles/Benefits.module.css";
+import benefitScrollStyles from "../styles/Animation/BenefitScroll.module.css";
+
 import ourAppStyles from "../styles/OurApp.module.css";
 import safetyStyles from "../styles/Safety.module.css";
 import associatesStyles from "../styles/associates.module.css";
@@ -18,6 +22,7 @@ import contactUsStyles from "../styles/ContactUs.module.css";
 
 import GetMeAccordion from "../src/GetMeAccordion";
 import GetContactUsFrom from "../src/contactForm/GetContactUsFrom";
+import { benefits_scrollData } from "../src/benefits_scrollData";
 
 export default function Home() {
   return (
@@ -104,7 +109,7 @@ function ContactUs() {
             </div>
             <div className={contactUsStyles.contact_us_details}>
               <div className={contactUsStyles.contact_us_details_img}>
-              <Image
+                <Image
                   src="/details_phone.png"
                   alt="Email Image"
                   width="48"
@@ -588,68 +593,57 @@ function AppCosmos() {
   );
 }
 
-function Benefits() {
+// --------------------------------------------------------------------------------------------------
+
+function BenefitContentBtn({ screen, setCurrImg, i }) {
+  const {
+    ref,
+    inView: isVisible,
+    entry,
+  } = useInView({
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.6,
+  });
+
+  useEffect(() => {
+    setCurrImg(i);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isVisible]);
+
+  const { extraStyle, benefits_helperText_2, benefits_helperText_1_3 } = screen;
+
   return (
-    <>
-      <div className={benefitStyles.benefits_container}>
-        {/* ---------------- 1 --------------------- */}
-        <div className={benefitStyles.benefits_frame_content}>
-          <div className={benefitStyles.benefits_content_btn}>
-            <div className={benefitStyles.benefits_content}>
-              <div className={benefitStyles.benefits_helperText_1}>
-                AUTOMATION
-              </div>
-              <div className={benefitStyles.benefits_helperText_2}>
-                <p>
-                  Upgrade your <span>home.</span>
-                </p>
-              </div>
-              <div className={benefitStyles.benefits_helperText_1_3}>
-                Smi-Fi can connects with multiple appliances and convert them
-                into smart appliances.
-              </div>
+    <div
+      className={`${benefitScrollStyles.screen_text} ${
+        isVisible ? benefitScrollStyles.text_visible : ""
+      }`}
+      ref={ref}
+    >
+      <>
+        <div className={benefitStyles.benefits_content_btn}>
+          <div className={benefitStyles.benefits_content}>
+            <div
+              className={`${benefitStyles.benefits_helperText_1} 
+              ${extraStyle && benefitStyles.benefits_helperText_1_extra}`}
+            >
+              AUTOMATION
             </div>
-            <div className={benefitStyles.benefits_btn_box}>
-              <button className={benefitStyles.benefits_btn}>
-                See the Magic of Smi-Fi
-                <FontAwesomeIcon icon={faArrowRight} />
-              </button>
+            <div
+              className={`${benefitStyles.benefits_helperText_2} 
+              ${extraStyle && benefitStyles.benefits_helperText_2_extra}`}
+            >
+              <p>
+                Upgrade your <span>{benefits_helperText_2}</span>
+              </p>
             </div>
-          </div>
-          <div className={benefitStyles.benefits_img}>
-            <Image
-              src="/benefits_frame_1.png"
-              alt="benefits_frame_1 image"
-              width="720"
-              height="691"
-            />
-          </div>
-        </div>
-        {/* 2 */}
-        <div className={benefitStyles.benefits_frame_content}>
-          <div className={benefitStyles.benefits_content_btn_diff}>
-            <div className={benefitStyles.benefits_content_diff}>
-              <div
-                className={benefitStyles.benefits_helperText_1}
-                style={{ marginBottom: "20px" }}
-              >
-                AUTOMATION
-              </div>
-              <div
-                className={benefitStyles.benefits_helperText_2}
-                style={{ marginBottom: "25px" }}
-              >
-                <p>
-                  Upgrade your <span>lifestyle.</span>
-                </p>
-              </div>
-              <div
-                className={benefitStyles.benefits_helperText_1_3}
-                style={{ marginBottom: "25px" }}
-              >
-                Use voice command or mobile phone to turn ON/OFF all your
-                appliances from anywhere anytime. Schedule timer for appliances.
-              </div>
+            <div
+              className={`${benefitStyles.benefits_helperText_1_3} 
+              ${extraStyle && benefitStyles.benefits_helperText_1_3_extra}`}
+            >
+              {benefits_helperText_1_3}
+            </div>
+            {extraStyle && (
               <div className={benefitStyles.benefits_alexa_img}>
                 <Image
                   src="/Alexa_google.png"
@@ -658,63 +652,70 @@ function Benefits() {
                   height="80"
                 />
               </div>
-            </div>
-            <div
-              className={benefitStyles.benefits_btn_box}
-              style={{ marginTop: "0px" }}
-            >
-              <button className={benefitStyles.benefits_btn}>
-                See the Magic of Smi-Fi
-                <FontAwesomeIcon icon={faArrowRight} />
-              </button>
-            </div>
+            )}
           </div>
-          <div className={benefitStyles.benefits_img}>
-            <Image
-              src="/benefits_frame_2.png"
-              alt="benefits_frame_2 image"
-              width="720"
-              height="691"
-            />
+          <div className={benefitStyles.benefits_btn_box}>
+            <button className={benefitStyles.benefits_btn}>
+              See the Magic of Smi-Fi
+              <FontAwesomeIcon icon={faArrowRight} />
+            </button>
           </div>
         </div>
-        {/* 3 */}
-        <div className={benefitStyles.benefits_frame_content}>
-          <div className={benefitStyles.benefits_content_btn}>
-            <div className={benefitStyles.benefits_content}>
-              <div className={benefitStyles.benefits_helperText_1}>
-                AUTOMATION
+      </>
+    </div>
+  );
+}
+
+function Benefits() {
+  const [currImg, setCurrImg] = useState(0);
+  const [imgUrl, setImgUrl] = useState(`/benefits_frame_${currImg + 1}.png`);
+  useEffect(() => {
+    setImgUrl(`/benefits_frame_${currImg + 1}.png`);
+  }, [currImg]);
+  return (
+    <>
+      <div className={benefitStyles.mobileScroll}>
+        <div className={benefitStyles.mobileScroll_content_wrapper}>
+          {benefits_scrollData.map((screen, i) => {
+            return (
+              <div
+                className={benefitStyles.mobileScroll_fullScreen}
+                key={screen.benefits_img}
+              >
+                <BenefitContentBtn
+                  screen={screen}
+                  i={i}
+                  setCurrImg={setCurrImg}
+                />
               </div>
-              <div className={benefitStyles.benefits_helperText_2}>
-                <p>
-                  Upgrade your <span>savings.</span>
-                </p>
-              </div>
-              <div className={benefitStyles.benefits_helperText_1_3}>
-                Get alerts on unattended appliances or unhealthy appliances and
-                control it with your phone.
-              </div>
+            );
+          })}
+        </div>
+        <div className={benefitStyles.mobile_mockup_wrapper}>
+          <div className={benefitStyles.mobile_mockup}>
+            <div className={benefitStyles.mobile_mockup_screen}>
+              <Image
+                className={
+                  currImg === 0
+                    ? benefitScrollStyles.slide_in_left1
+                    : currImg === 1
+                    ? benefitScrollStyles.slide_in_left2
+                    : benefitScrollStyles.slide_in_left3
+                }
+                src={imgUrl}
+                alt={setImgUrl + "image"}
+                width="720"
+                height="691"
+              />
             </div>
-            <div className={benefitStyles.benefits_btn_box}>
-              <button className={benefitStyles.benefits_btn}>
-                See the Magic of Smi-Fi
-                <FontAwesomeIcon icon={faArrowRight} />
-              </button>
-            </div>
-          </div>
-          <div className={benefitStyles.benefits_img}>
-            <Image
-              src="/benefits_frame_3.png"
-              alt="benefits_frame_3 image"
-              width="720"
-              height="691"
-            />
           </div>
         </div>
       </div>
     </>
   );
 }
+
+// --------------------------------------------------------------------------------------------------
 
 // Helper Text "unlock superpower"
 function HelperTextSuperpower() {
@@ -830,9 +831,12 @@ function GetSmifi() {
                 YOUR HOME ENERGY ASSISTANT
               </div>
               <div className={styles.getSmifi_smarterHomes}>
-                <p>
-                  Smi-Fi makes your Home <span>Smarter.</span>
-                </p>
+                Smi-Fi makes your Home{" "}
+                <div className={styles.getSmifi_smarterHomes_allTexts}>
+                  <span>Smarter</span>
+                  <span>Safer</span>
+                  <span>Energy Conscious</span>
+                </div>
               </div>
             </div>
             <div className={styles.supportText}>
