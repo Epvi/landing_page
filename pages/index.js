@@ -2,11 +2,6 @@ import Image from "next/legacy/image";
 import { useEffect, useState } from "react";
 // import Image from "next/image";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowRight,
-  faArrowUpRightFromSquare,
-} from "@fortawesome/free-solid-svg-icons";
 import { useInView } from "react-intersection-observer";
 
 import styles from "../styles/Home.module.css";
@@ -18,7 +13,7 @@ import ourAppStyles from "../styles/OurApp.module.css";
 import safetyStyles from "../styles/Safety.module.css";
 import associatesStyles from "../styles/associates.module.css";
 import smifiUserCardsStyles from "../styles/SmifiUsersCards.module.css";
-import FaQStyles from "../styles/FaQ.module.css";
+import faQStyles from "../styles/FaQ.module.css";
 import contactUsStyles from "../styles/ContactUs.module.css";
 
 import GetMeAccordion from "../src/GetMeAccordion";
@@ -137,34 +132,39 @@ function ContactUs() {
 function FaQ() {
   return (
     <>
-      <div className={FaQStyles.faq_container}>
-        <div className={FaQStyles.faq_heading_box}>
-          <div className={FaQStyles.faq_heading}>
+      <div className={faQStyles.faq_container}>
+        <div className={faQStyles.faq_heading_box}>
+          <div className={faQStyles.faq_heading}>
             Frequently Asked Questions?
           </div>
         </div>
         {/* Ask More Qustions */}
-        <div className={FaQStyles.faq_ask_accordion}>
-          <div className={FaQStyles.faq_ask}>
-            <div className={FaQStyles.faq_ask_helper_txt}>
+        <div className={faQStyles.faq_ask_accordion}>
+          <div className={faQStyles.faq_ask}>
+            <div className={faQStyles.faq_ask_helper_txt}>
               Have more questions?
             </div>
-            <div className={FaQStyles.faq_ask_block}>
-              <div className={FaQStyles.faq_ask_email}>
+            <div className={faQStyles.faq_ask_block}>
+              <div className={faQStyles.faq_ask_email}>
                 <Link href="#">Email support</Link>
               </div>
-              <div className={FaQStyles.faq_ask_help_center}>
+              <div className={faQStyles.faq_ask_help_center}>
                 <Link href="#">
                   <div>Go to Help Center</div>
-                  <div>
-                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                  <div className={faQStyles.faq_ask_help_center_icon}>
+                    <Image
+                      src="/faArrowUpRightFromSquare.png"
+                      alt="faArrowUpRightFromSquare image"
+                      width="16"
+                      height="16"
+                    />
                   </div>
                 </Link>
               </div>
             </div>
           </div>
           {/* accordion */}
-          <div className={FaQStyles.faq_accordion}>
+          <div className={faQStyles.faq_accordion}>
             <GetMeAccordion />
           </div>
         </div>
@@ -473,7 +473,12 @@ function ApplicationFeatures() {
             <button className={ourAppStyles.appFeature_btn}>
               See more
               <div className={ourAppStyles.appFeature_btn_circle}>
-                <FontAwesomeIcon icon={faArrowRight} />
+                <Image
+                  src="/fa_right_arrow.png"
+                  alt="/fa_right_arrow image"
+                  width="15"
+                  height="15"
+                />
               </div>
             </button>
           </div>
@@ -512,7 +517,12 @@ function ApplicationFeatures() {
             <button className={ourAppStyles.appFeature_btn}>
               See more
               <div className={ourAppStyles.appFeature_btn_circle}>
-                <FontAwesomeIcon icon={faArrowRight} />
+                <Image
+                  src="/fa_right_arrow.png"
+                  alt="/fa_right_arrow image"
+                  width="15"
+                  height="15"
+                />
               </div>
             </button>
           </div>
@@ -553,7 +563,12 @@ function ApplicationFeatures() {
             <button className={ourAppStyles.appFeature_btn}>
               See more
               <div className={ourAppStyles.appFeature_btn_circle}>
-                <FontAwesomeIcon icon={faArrowRight} />
+                <Image
+                  src="/fa_right_arrow.png"
+                  alt="/fa_right_arrow image"
+                  width="15"
+                  height="15"
+                />
               </div>
             </button>
           </div>
@@ -659,7 +674,12 @@ function BenefitContentBtn({ screen, prev, setPrevImg, setCurrImg, i }) {
           <div className={benefitStyles.benefits_btn_box}>
             <button className={benefitStyles.benefits_btn}>
               See the Magic of Smi-Fi
-              <FontAwesomeIcon icon={faArrowRight} />
+              <Image
+                src="/fa_right_arrow.png"
+                alt="/fa_right_arrow image"
+                width="15"
+                height="15"
+              />
             </button>
           </div>
         </div>
@@ -676,7 +696,7 @@ function Benefits() {
   useEffect(() => {
     setFadeOut(true);
     setFadeOut(false);
-  }, [currImg]);
+  }, []);
   return (
     <>
       <div className={benefitStyles.mobileScroll}>
@@ -793,9 +813,10 @@ function HelperTextSuperpower() {
               isVisible
                 ? superpowerScroll.fade_in_bottom
                 : superpowerScroll.slide_out_blurred_br
-            }`}
+            } `}
           >
             <Image
+              priority
               src="/Smi-Fi_box_front_1.png"
               alt="Smifi device Image"
               layout="fill"
@@ -889,7 +910,12 @@ function GetSmifi() {
           <div className={styles.getSmifi_action}>
             <button id={styles.getSmifi_btn}>
               Get Smi-Fi
-              <FontAwesomeIcon icon={faArrowRight} />
+              <Image
+                src="/fa_right_arrow.png"
+                alt="/fa_right_arrow image"
+                width="15"
+                height="15"
+              />
             </button>
             <div className={styles.getSmifi_rating}>
               <Image

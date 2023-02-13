@@ -1,17 +1,12 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/legacy/image";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faMagnifyingGlass,
-  faArrowDown,
-  faArrowUp,
-} from "@fortawesome/free-solid-svg-icons";
+import { useInView } from "react-intersection-observer";
 
 import blogHomeStyles from "../../styles/BlogCss/BlogHome.module.css";
 import cardsStyles from "../../styles/BlogCss/Cards.module.css";
 import freeTrialStyles from "../../styles/BlogCss/freeTrial.module.css";
+import fadePopUp from "../../styles/Animation/Superpower.module.css";
 
 import { blogData } from "../../src/BlogHomePageData";
 
@@ -144,17 +139,31 @@ function BlogCardsList() {
       </div>
       <div className={blogHomeStyles.blogs_loadMore_btn_icon}>
         <div className={blogHomeStyles.blogs_loadMore_btn}>
-          {renderedAllBlogs ? (
-            <FontAwesomeIcon icon={faArrowUp} />
-          ) : (
-            <FontAwesomeIcon icon={faArrowDown} />
-          )}
-          <button
-            // disabled={renderedAllBlogs}
-            onClick={renderedAllBlogs ? handleDecreaseCnt : handleIncreaseCnt}
-          >
-            {renderedAllBlogs ? "Show less" : "Load more"}
-          </button>
+          <div className={blogHomeStyles.blogs_loadMore_btn_btn}>
+            {renderedAllBlogs ? (
+              <Image
+                src="/fa_arrow_up.png"
+                alt="fa_arrow_up image"
+                width="15"
+                height="15"
+              />
+            ) : (
+              <Image
+                src="/fa_arrow_down.png"
+                alt="fa_arrow_down image"
+                width="15"
+                height="15"
+              />
+            )}
+          </div>
+          <div className={blogHomeStyles.blogs_loadMore_txt}>
+            <button
+              // disabled={renderedAllBlogs}
+              onClick={renderedAllBlogs ? handleDecreaseCnt : handleIncreaseCnt}
+            >
+              {renderedAllBlogs ? "Show less" : "Load more"}
+            </button>
+          </div>
         </div>
       </div>
     </>
@@ -162,16 +171,27 @@ function BlogCardsList() {
 }
 
 function BlogCard({ item }) {
+  const { ref, inView, entry } = useInView({
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.6,
+  });
   const { user, designation, title, body, date } = item;
   return (
     <>
-      <div className={cardsStyles.card_container}>
+      <div
+        ref={ref}
+        className={`${cardsStyles.card_container} 
+       ${inView && fadePopUp.fade_in_bottom}`}
+      >
         <div className={cardsStyles.cards_content_image}>
           <Image
             src="/BlogUser_blog.png"
+            blurDataURL={"/BlogUser_blog.png"}
             alt="BlogUser_blog 1"
             width="336"
             height="240"
+            placeholder="blur"
           />
         </div>
         <div className={cardsStyles.cards_content}>
@@ -249,7 +269,12 @@ function BlogHeadingSection() {
           </div>
           <div className={blogHomeStyles.blog_heading_search}>
             <div className={blogHomeStyles.blog_heading_search_icon}>
-              <FontAwesomeIcon icon={faMagnifyingGlass} />
+              <Image
+                src="/faMagnifyingGlass.png"
+                alt="faMagnifyingGlass image"
+                width="30"
+                height="30"
+              />
             </div>
             <form name="search" target="#" method="GET" onSubmit={handleSearch}>
               <input
