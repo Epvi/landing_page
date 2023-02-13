@@ -12,6 +12,7 @@ import { useInView } from "react-intersection-observer";
 import styles from "../styles/Home.module.css";
 import benefitStyles from "../styles/Benefits.module.css";
 import benefitScrollStyles from "../styles/Animation/BenefitScroll.module.css";
+import superpowerScroll from "../styles/Animation/Superpower.module.css";
 
 import ourAppStyles from "../styles/OurApp.module.css";
 import safetyStyles from "../styles/Safety.module.css";
@@ -595,7 +596,7 @@ function AppCosmos() {
 
 // --------------------------------------------------------------------------------------------------
 
-function BenefitContentBtn({ screen, setCurrImg, i }) {
+function BenefitContentBtn({ screen, prev, setPrevImg, setCurrImg, i }) {
   const {
     ref,
     inView: isVisible,
@@ -607,6 +608,7 @@ function BenefitContentBtn({ screen, setCurrImg, i }) {
   });
 
   useEffect(() => {
+    setPrevImg(prev);
     setCurrImg(i);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isVisible]);
@@ -668,9 +670,12 @@ function BenefitContentBtn({ screen, setCurrImg, i }) {
 
 function Benefits() {
   const [currImg, setCurrImg] = useState(0);
-  const [imgUrl, setImgUrl] = useState(`/benefits_frame_${currImg + 1}.png`);
+  const [prevImg, setPrevImg] = useState(currImg);
+  const [fadeOut, setFadeOut] = useState(false);
+
   useEffect(() => {
-    setImgUrl(`/benefits_frame_${currImg + 1}.png`);
+    setFadeOut(true);
+    setFadeOut(false);
   }, [currImg]);
   return (
     <>
@@ -685,7 +690,9 @@ function Benefits() {
                 <BenefitContentBtn
                   screen={screen}
                   i={i}
+                  prev={currImg}
                   setCurrImg={setCurrImg}
+                  setPrevImg={setPrevImg}
                 />
               </div>
             );
@@ -695,15 +702,30 @@ function Benefits() {
           <div className={benefitStyles.mobile_mockup}>
             <div className={benefitStyles.mobile_mockup_screen}>
               <Image
-                className={
-                  currImg === 0
-                    ? benefitScrollStyles.slide_in_left1
-                    : currImg === 1
-                    ? benefitScrollStyles.slide_in_left2
-                    : benefitScrollStyles.slide_in_left3
-                }
-                src={imgUrl}
-                alt={setImgUrl + "image"}
+                className={`
+                  ${
+                    prevImg === 0
+                      ? benefitScrollStyles.fade_out1
+                      : prevImg === 1
+                      ? benefitScrollStyles.fade_out2
+                      : benefitScrollStyles.fade_out3
+                  } `}
+                src={`/benefits_frame_${prevImg + 1}.png`}
+                alt={prevImg + "image"}
+                width="720"
+                height="691"
+              />
+              <Image
+                className={`
+                  ${
+                    currImg === 0
+                      ? benefitScrollStyles.fade_in1
+                      : currImg === 1
+                      ? benefitScrollStyles.fade_in2
+                      : benefitScrollStyles.fade_in3
+                  } `}
+                src={`/benefits_frame_${currImg + 1}.png`}
+                alt={currImg + "image"}
                 width="720"
                 height="691"
               />
@@ -719,9 +741,24 @@ function Benefits() {
 
 // Helper Text "unlock superpower"
 function HelperTextSuperpower() {
+  // const [outofView, setOutOfView] = useState(false);
+  const {
+    ref,
+    inView: isVisible,
+    entry,
+  } = useInView({
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.6,
+  });
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isVisible]);
+
   return (
     <>
-      <div className={styles.superpower_container}>
+      <div className={styles.superpower_container} ref={ref}>
         <div className={styles.superpower_designImg_text}>
           <div className={styles.superpower_imgLeft}>
             <Image
@@ -750,8 +787,14 @@ function HelperTextSuperpower() {
             />
           </div>
         </div>
-        <div className={styles.superpower_smifi_image_box}>
-          <div className={styles.superpower_smifi_image}>
+        <div className={styles.superpower_smifi_image_box} ref={ref}>
+          <div
+            className={`${styles.superpower_smifi_image} ${
+              isVisible
+                ? superpowerScroll.fade_in_bottom
+                : superpowerScroll.slide_out_blurred_br
+            }`}
+          >
             <Image
               src="/Smi-Fi_box_front_1.png"
               alt="Smifi device Image"

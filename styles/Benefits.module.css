@@ -33,6 +33,16 @@
   /* top: 150px; */
 }
 
+.mobile_mockup_screen {
+  display: grid;
+  grid-template-areas: "overlay";
+}
+.mobile_mockup_screen > span {
+  grid-area: overlay;
+}
+.overlamobile_mockup_screenpGrid > div {
+  grid-area: overlay;
+}
 .benefits_content {
   display: flex;
   flex-direction: column;
