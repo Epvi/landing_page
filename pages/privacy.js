@@ -9,13 +9,15 @@ const Privacy = () => {
         <div className={styles.privacy_container}>
           <div className={styles.home_btn}>
             <Link href="/">
-              <Image
-                src="fa_left_arrow.png"
-                alt="fa_left_arrow image "
-                width="14"
-                height="16"
-              />
-              {"   "}Back to Home page
+              <div className={styles.privacy_make_inline}>
+                <Image
+                  src="/fa_left_arrow.png"
+                  alt="fa_left_arrow image "
+                  width="14"
+                  height="16"
+                />
+                <p>{"   "}Back to Home page</p>
+              </div>
             </Link>
           </div>
           <div className={styles.privacy_heading}>
