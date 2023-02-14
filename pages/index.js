@@ -722,6 +722,7 @@ function Benefits() {
           <div className={benefitStyles.mobile_mockup}>
             <div className={benefitStyles.mobile_mockup_screen}>
               <Image
+                priority
                 className={`
                   ${
                     prevImg === 0
@@ -736,6 +737,7 @@ function Benefits() {
                 height="691"
               />
               <Image
+                priority
                 className={`
                   ${
                     currImg === 0
