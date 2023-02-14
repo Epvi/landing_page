@@ -68,6 +68,7 @@ function ContactUs() {
             <div className={contactUsStyles.contact_us_details}>
               <div className={contactUsStyles.contact_us_details_img}>
                 <Image
+                  priority
                   src="/details_email.png"
                   alt="Email Image"
                   width="48"
@@ -87,6 +88,7 @@ function ContactUs() {
             <div className={contactUsStyles.contact_us_details}>
               <div className={contactUsStyles.contact_us_details_img}>
                 <Image
+                  priority
                   src="/details_office.png"
                   alt="Email Image"
                   width="48"
@@ -106,6 +108,7 @@ function ContactUs() {
             <div className={contactUsStyles.contact_us_details}>
               <div className={contactUsStyles.contact_us_details_img}>
                 <Image
+                  priority
                   src="/details_phone.png"
                   alt="Email Image"
                   width="48"
@@ -153,6 +156,7 @@ function FaQ() {
                   <div>Go to Help Center</div>
                   <div className={faQStyles.faq_ask_help_center_icon}>
                     <Image
+                      priority
                       src="/faArrowUpRightFromSquare.png"
                       alt="faArrowUpRightFromSquare image"
                       width="16"
@@ -201,6 +205,7 @@ function HappySmifiUsers() {
                 className={smifiUserCardsStyles.smifi_users_card_user_details}
               >
                 <Image
+                  priority
                   src="/user_card_profile_1.png"
                   alt="user_card_profile_1 image"
                   width="57"
@@ -236,6 +241,7 @@ function HappySmifiUsers() {
                 className={smifiUserCardsStyles.smifi_users_card_user_details}
               >
                 <Image
+                  priority
                   src="/user_card_profile_2.png"
                   alt="user_card_profile_2 image"
                   width="57"
@@ -271,6 +277,7 @@ function HappySmifiUsers() {
                 className={smifiUserCardsStyles.smifi_users_card_user_details}
               >
                 <Image
+                  priority
                   src="/user_card_profile_3.png"
                   alt="user_card_profile_3 image"
                   width="57"
@@ -334,6 +341,7 @@ function AssociationCompanies() {
           </div>
           <div className={associatesStyles.associates_img}>
             <Image
+              priority
               src="/associate_counterPart.png"
               alt="associate_counterPart images"
               width="1162"
@@ -354,6 +362,7 @@ function SafetyFeatures() {
         <div className={safetyStyles.safety_features_box}>
           <div className={safetyStyles.safety_features_img}>
             <Image
+              priority
               src="/safety-feature-recycling-1.png"
               alt="safety-feature-recycling-1 Image"
               width="65"
@@ -373,6 +382,7 @@ function SafetyFeatures() {
         <div className={safetyStyles.safety_features_box}>
           <div className={safetyStyles.safety_features_img}>
             <Image
+              priority
               src="/safety-feature-home-1.png"
               alt="safety-feature-recycling-2 Image"
               width="65"
@@ -392,6 +402,7 @@ function SafetyFeatures() {
         <div className={safetyStyles.safety_features_box}>
           <div className={safetyStyles.safety_features_img}>
             <Image
+              priority
               src="/safety-feature-electricity-1.png"
               alt="safety-feature-recycling-3 Image"
               width="65"
@@ -417,6 +428,7 @@ function Safety() {
     <>
       <div className={safetyStyles.safety_dot_side_design}>
         <Image
+          priority
           src="/accounting_dots.svg.png"
           alt="side_dot_image"
           width="430"
@@ -474,6 +486,7 @@ function ApplicationFeatures() {
               See more
               <div className={ourAppStyles.appFeature_btn_circle}>
                 <Image
+                  priority
                   src="/fa_right_arrow.png"
                   alt="/fa_right_arrow image"
                   width="15"
@@ -485,6 +498,7 @@ function ApplicationFeatures() {
         </div>
         <div className={ourAppStyles.appFeature_1_frame}>
           <Image
+            priority
             src="/our_app_feature_1.png"
             alt="our_app_feature_1 Image"
             width="534"
@@ -518,6 +532,7 @@ function ApplicationFeatures() {
               See more
               <div className={ourAppStyles.appFeature_btn_circle}>
                 <Image
+                  priority
                   src="/fa_right_arrow.png"
                   alt="/fa_right_arrow image"
                   width="15"
@@ -529,6 +544,7 @@ function ApplicationFeatures() {
         </div>
         <div className={ourAppStyles.appFeature_2_frame}>
           <Image
+            priority
             src="/our_app_feature_2.png"
             alt="our_app_feature_2 Image"
             width="640"
@@ -564,6 +580,7 @@ function ApplicationFeatures() {
               See more
               <div className={ourAppStyles.appFeature_btn_circle}>
                 <Image
+                  priority
                   src="/fa_right_arrow.png"
                   alt="/fa_right_arrow image"
                   width="15"
@@ -575,6 +592,7 @@ function ApplicationFeatures() {
         </div>
         <div className={ourAppStyles.appFeature_1_frame}>
           <Image
+            priority
             src="/our_app_feature_3.png"
             alt="our_app_feature_3 Image"
             width="534"
@@ -599,6 +617,7 @@ function AppCosmos() {
       </div>
       <div className={ourAppStyles.appCosmos_ourApp_1}>
         <Image
+          priority
           src="/ourApp_1.png"
           height="540"
           width="700"
@@ -663,6 +682,7 @@ function BenefitContentBtn({ screen, prev, setPrevImg, setCurrImg, i }) {
             {extraStyle && (
               <div className={benefitStyles.benefits_alexa_img}>
                 <Image
+                  priority
                   src="/Alexa_google.png"
                   alt="Alexa_google.png image"
                   width="214"
@@ -675,6 +695,7 @@ function BenefitContentBtn({ screen, prev, setPrevImg, setCurrImg, i }) {
             <button className={benefitStyles.benefits_btn}>
               See the Magic of Smi-Fi
               <Image
+                priority
                 src="/fa_right_arrow.png"
                 alt="/fa_right_arrow image"
                 width="15"
@@ -784,6 +805,7 @@ function HelperTextSuperpower() {
         <div className={styles.superpower_designImg_text}>
           <div className={styles.superpower_imgLeft}>
             <Image
+              priority
               src="/design_dots.png"
               alt="left_side_design"
               width="170"
@@ -802,6 +824,7 @@ function HelperTextSuperpower() {
           </div>
           <div className={styles.superpower_imgRight}>
             <Image
+              priority
               src="/design_dots.png"
               alt="right_side_design"
               width="170"
@@ -841,6 +864,7 @@ function Features() {
         <div className={styles.features_frame}>
           <div className={styles.features_frame1_img}>
             <Image
+              priority
               src="/features_frame1.png"
               width="262"
               height="210"
@@ -855,6 +879,7 @@ function Features() {
         <div className={styles.features_frame}>
           <div className={styles.features_frame2_img}>
             <Image
+              priority
               src="/features_frame2.png"
               width="204"
               height="210"
@@ -869,6 +894,7 @@ function Features() {
         <div className={styles.features_frame}>
           <div className={styles.features_frame3_img}>
             <Image
+              priority
               src="/features_frame3.png"
               width="230"
               height="210"
@@ -913,6 +939,7 @@ function GetSmifi() {
             <button id={styles.getSmifi_btn}>
               Get Smi-Fi
               <Image
+                priority
                 src="/fa_right_arrow.png"
                 alt="/fa_right_arrow image"
                 width="15"
@@ -921,6 +948,7 @@ function GetSmifi() {
             </button>
             <div className={styles.getSmifi_rating}>
               <Image
+                priority
                 width="120"
                 height="24"
                 src="/Rating.png"
@@ -934,6 +962,7 @@ function GetSmifi() {
         </div>
         <div className={styles.getSmifi_mobileApp_device}>
           <Image
+            priority
             src="/Picture4 _1.png"
             alt="Smi-fi and App"
             layout="fill"
