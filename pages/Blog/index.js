@@ -179,11 +179,7 @@ function BlogCard({ item }) {
   const { user, designation, title, body, date } = item;
   return (
     <>
-      <div
-        ref={ref}
-        className={`${cardsStyles.card_container} 
-       ${inView && fadePopUp.fade_in_bottom}`}
-      >
+      <div ref={ref} className={`${cardsStyles.card_container}`}>
         <div className={cardsStyles.cards_content_image}>
           <Image
             src="/BlogUser_blog.png"
