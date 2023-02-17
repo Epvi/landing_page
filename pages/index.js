@@ -19,6 +19,7 @@ import contactUsStyles from "../styles/ContactUs.module.css";
 import GetMeAccordion from "../src/GetMeAccordion";
 import GetContactUsFrom from "../src/contactForm/GetContactUsFrom";
 import { benefits_scrollData } from "../src/benefits_scrollData";
+import AppleComponent from '../components/appleComponent'
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <div className={styles.main}>
         <GetSmifi />
         <Features />
+        <AppleComponent />
         <HelperTextSuperpower />
         <Benefits />
         <AppCosmos />
