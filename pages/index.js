@@ -27,13 +27,14 @@ export default function Home() {
       <div className={styles.main}>
         <GetSmifi />
         <Features />
-        <AppleComponent />
         <HelperTextSuperpower />
         <Benefits />
         <AppCosmos />
         <ApplicationFeatures />
         <Safety />
         <SafetyFeatures />
+
+        <AppleComponent />
         <AssociationCompanies />
         <VideoBox />
         <HappySmifiUsers />

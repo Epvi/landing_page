@@ -1,3 +1,11 @@
+#html {
+    height: 2000vh;
+}
+
+#body {
+    position: sticky;
+    top: 70px;
+}
 
 canvas {
     /* position: fixed;

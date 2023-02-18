@@ -14,13 +14,13 @@ const preloadImages = () => {
   }
 };
 export default function AppleComponent() {
-  useEffect(() => {}, []);
   useEffect(() => {
     preloadImages();
     const canvas = document.getElementById("canvas");
     const html = document.getElementById("html");
     const body = document.getElementById("body");
     const context = canvas.getContext("2d");
+
     canvas.width = 1158;
     canvas.height = 770;
     const img = new Image();
@@ -29,22 +29,37 @@ export default function AppleComponent() {
     img.onload = function () {
       context.drawImage(img, 0, 0);
     };
+
     const updateImage = (index) => {
       img.src = currentFrame(index);
-      // console.log('update image', img, index)
       context.drawImage(img, 0, 0);
     };
-    window.addEventListener("scroll", () => {
-      const scrollTopWindow = window.document.documentElement.scrollTop
-      const scrollHeight = window.document.documentElement.scrollHeight
-      const maxScrollTop = scrollHeight - window.innerHeight;
-      const scrollFraction = scrollTopWindow / maxScrollTop;
-      const frameIndex = Math.min(
-        frameCount - 1,
-        Math.floor(scrollFraction * frameCount)
-      );
 
-      window.requestAnimationFrame(() => updateImage(frameIndex + 1));
+    window.addEventListener("scroll", () => {
+      const scrollTopElement = html.offsetTop;
+      const scrollHeightElement = html.offsetHeight;
+
+      const scrollTopWindow = window.document.documentElement.scrollTop;
+      const scrollHeightWindow = window.document.documentElement.scrollHeight;
+
+      const animationStart = scrollTopWindow - scrollTopElement;
+
+      console.log(scrollTopWindow - scrollTopElement);
+      //   if (scrollTopWindow >= scrollTopElement) {
+      if (animationStart >= 0) {
+        // const maxScrollTop = scrollHeightWindow - window.innerHeight;
+        const maxScrollTop = scrollHeightWindow - window.innerHeight;
+        // const scrollFraction = scrollTopWindow / maxScrollTop;
+        const scrollFraction = animationStart / maxScrollTop;
+
+        console.log(html.offsetTop, html.offsetHeight);
+        const frameIndex = Math.min(
+          frameCount - 1,
+          Math.floor(scrollFraction * frameCount)
+        );
+
+        window.requestAnimationFrame(() => updateImage(frameIndex + 1));
+      }
     });
   }, []);
 
