@@ -28,7 +28,7 @@ export default function Home() {
         <GetSmifi />
         <Features />
         <HelperTextSuperpower />
-        <AppleComponent frameCount={205} url={'/Layer205_1158x770/Layer '}/>
+        <AppleComponent frameCount={148} url={'/Layer205_1158x770/Layer '}/>
         <Benefits />
         <AppCosmos />
         <ApplicationFeatures />
