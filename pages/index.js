@@ -28,7 +28,7 @@ export default function Home() {
         <GetSmifi />
         <Features />
         <HelperTextSuperpower />
-        <AppleComponent frameCount={148} url={'https://ik.imagekit.io/sr3vdb6wn/Layer_'}/>
+        <AppleComponent frameCount={205} url={'https://ik.imagekit.io/sr3vdb6wn/Layer_'}/>
         <Benefits />
         <AppCosmos />
         <ApplicationFeatures />

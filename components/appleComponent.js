@@ -59,6 +59,7 @@ const currentFrame = (index, url) => `${url}${index}.png`;
 
 const preloadImages = (frameCount, url) => {
   for (let i = 1; i <= frameCount; i++) {
+    console.log(i)
     const img = new Image();
     img.src = currentFrame(i, url);
   }
