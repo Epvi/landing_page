@@ -22,6 +22,10 @@
   color: #377bff;
   /* text-decoration: none; */
 }
+.privacy_make_inline {
+  display: flex;
+  gap: 8px;
+}
 
 .privacy_heading {
   font-family: "Montserrat";

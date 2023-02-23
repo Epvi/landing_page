@@ -1,0 +1,140 @@
+.scroll_full_screen {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.screen_text {
+  opacity: 0;
+  padding-bottom: 80px;
+}
+
+.text_visible {
+  opacity: 1;
+  transition: 0.75s;
+}
+/* ------------------------------------- Animation ---------------------------------- */
+/* --------- In ----------------*/
+.fade_in1 {
+  -webkit-animation: fade_in1 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade_in1 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+@-webkit-keyframes fade_in1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade_in1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fade_in2 {
+  -webkit-animation: fade_in2 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade_in2 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+@-webkit-keyframes fade_in2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade_in2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fade_in3 {
+  -webkit-animation: fade_in3 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade_in3 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+@-webkit-keyframes fade_in3 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade_in3 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ----------out------------ */
+.fade_out1 {
+  -webkit-animation: fade_out1 0.8s ease-out both;
+  animation: fade_out1 0.8s ease-out both;
+}
+@-webkit-keyframes fade_out1 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade_out1 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.fade_out2 {
+  -webkit-animation: fade_out2 0.8s ease-out both;
+  animation: fade_out2 0.8s ease-out both;
+}
+@-webkit-keyframes fade_out2 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade_out2 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.fade_out3 {
+  -webkit-animation: fade_out3 0.8s ease-out both;
+  animation: fade_out3 0.8s ease-out both;
+}
+@-webkit-keyframes fade_out3 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade_out3 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

@@ -1,23 +1,25 @@
 import Image from "next/legacy/image";
+import { useEffect, useState, useRef } from "react";
 // import Image from "next/image";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowRight,
-  faArrowUpRightFromSquare,
-} from "@fortawesome/free-solid-svg-icons";
+import { useInView } from "react-intersection-observer";
 
 import styles from "../styles/Home.module.css";
 import benefitStyles from "../styles/Benefits.module.css";
+import benefitScrollStyles from "../styles/Animation/BenefitScroll.module.css";
+import superpowerScroll from "../styles/Animation/Superpower.module.css";
+
 import ourAppStyles from "../styles/OurApp.module.css";
 import safetyStyles from "../styles/Safety.module.css";
 import associatesStyles from "../styles/associates.module.css";
 import smifiUserCardsStyles from "../styles/SmifiUsersCards.module.css";
-import FaQStyles from "../styles/FaQ.module.css";
+import faQStyles from "../styles/FaQ.module.css";
 import contactUsStyles from "../styles/ContactUs.module.css";
 
 import GetMeAccordion from "../src/GetMeAccordion";
 import GetContactUsFrom from "../src/contactForm/GetContactUsFrom";
+import { benefits_scrollData } from "../src/benefits_scrollData";
+import AppleComponent from '../components/appleComponent'
 
 export default function Home() {
   return (
@@ -26,11 +28,13 @@ export default function Home() {
         <GetSmifi />
         <Features />
         <HelperTextSuperpower />
+        <AppleComponent frameCount={205} url={'https://ik.imagekit.io/sr3vdb6wn/Layer_'}/>
         <Benefits />
         <AppCosmos />
         <ApplicationFeatures />
         <Safety />
         <SafetyFeatures />
+
         <AssociationCompanies />
         <VideoBox />
         <HappySmifiUsers />
@@ -67,6 +71,7 @@ function ContactUs() {
             <div className={contactUsStyles.contact_us_details}>
               <div className={contactUsStyles.contact_us_details_img}>
                 <Image
+                  priority
                   src="/details_email.png"
                   alt="Email Image"
                   width="48"
@@ -86,6 +91,7 @@ function ContactUs() {
             <div className={contactUsStyles.contact_us_details}>
               <div className={contactUsStyles.contact_us_details_img}>
                 <Image
+                  priority
                   src="/details_office.png"
                   alt="Email Image"
                   width="48"
@@ -104,7 +110,8 @@ function ContactUs() {
             </div>
             <div className={contactUsStyles.contact_us_details}>
               <div className={contactUsStyles.contact_us_details_img}>
-              <Image
+                <Image
+                  priority
                   src="/details_phone.png"
                   alt="Email Image"
                   width="48"
@@ -131,34 +138,40 @@ function ContactUs() {
 function FaQ() {
   return (
     <>
-      <div className={FaQStyles.faq_container}>
-        <div className={FaQStyles.faq_heading_box}>
-          <div className={FaQStyles.faq_heading}>
+      <div className={faQStyles.faq_container}>
+        <div className={faQStyles.faq_heading_box}>
+          <div className={faQStyles.faq_heading}>
             Frequently Asked Questions?
           </div>
         </div>
         {/* Ask More Qustions */}
-        <div className={FaQStyles.faq_ask_accordion}>
-          <div className={FaQStyles.faq_ask}>
-            <div className={FaQStyles.faq_ask_helper_txt}>
+        <div className={faQStyles.faq_ask_accordion}>
+          <div className={faQStyles.faq_ask}>
+            <div className={faQStyles.faq_ask_helper_txt}>
               Have more questions?
             </div>
-            <div className={FaQStyles.faq_ask_block}>
-              <div className={FaQStyles.faq_ask_email}>
+            <div className={faQStyles.faq_ask_block}>
+              <div className={faQStyles.faq_ask_email}>
                 <Link href="#">Email support</Link>
               </div>
-              <div className={FaQStyles.faq_ask_help_center}>
+              <div className={faQStyles.faq_ask_help_center}>
                 <Link href="#">
                   <div>Go to Help Center</div>
-                  <div>
-                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                  <div className={faQStyles.faq_ask_help_center_icon}>
+                    <Image
+                      priority
+                      src="/faArrowUpRightFromSquare.png"
+                      alt="faArrowUpRightFromSquare image"
+                      width="16"
+                      height="16"
+                    />
                   </div>
                 </Link>
               </div>
             </div>
           </div>
           {/* accordion */}
-          <div className={FaQStyles.faq_accordion}>
+          <div className={faQStyles.faq_accordion}>
             <GetMeAccordion />
           </div>
         </div>
@@ -195,6 +208,7 @@ function HappySmifiUsers() {
                 className={smifiUserCardsStyles.smifi_users_card_user_details}
               >
                 <Image
+                  priority
                   src="/user_card_profile_1.png"
                   alt="user_card_profile_1 image"
                   width="57"
@@ -230,6 +244,7 @@ function HappySmifiUsers() {
                 className={smifiUserCardsStyles.smifi_users_card_user_details}
               >
                 <Image
+                  priority
                   src="/user_card_profile_2.png"
                   alt="user_card_profile_2 image"
                   width="57"
@@ -265,6 +280,7 @@ function HappySmifiUsers() {
                 className={smifiUserCardsStyles.smifi_users_card_user_details}
               >
                 <Image
+                  priority
                   src="/user_card_profile_3.png"
                   alt="user_card_profile_3 image"
                   width="57"
@@ -328,6 +344,7 @@ function AssociationCompanies() {
           </div>
           <div className={associatesStyles.associates_img}>
             <Image
+              priority
               src="/associate_counterPart.png"
               alt="associate_counterPart images"
               width="1162"
@@ -348,6 +365,7 @@ function SafetyFeatures() {
         <div className={safetyStyles.safety_features_box}>
           <div className={safetyStyles.safety_features_img}>
             <Image
+              priority
               src="/safety-feature-recycling-1.png"
               alt="safety-feature-recycling-1 Image"
               width="65"
@@ -367,6 +385,7 @@ function SafetyFeatures() {
         <div className={safetyStyles.safety_features_box}>
           <div className={safetyStyles.safety_features_img}>
             <Image
+              priority
               src="/safety-feature-home-1.png"
               alt="safety-feature-recycling-2 Image"
               width="65"
@@ -386,6 +405,7 @@ function SafetyFeatures() {
         <div className={safetyStyles.safety_features_box}>
           <div className={safetyStyles.safety_features_img}>
             <Image
+              priority
               src="/safety-feature-electricity-1.png"
               alt="safety-feature-recycling-3 Image"
               width="65"
@@ -411,6 +431,7 @@ function Safety() {
     <>
       <div className={safetyStyles.safety_dot_side_design}>
         <Image
+          priority
           src="/accounting_dots.svg.png"
           alt="side_dot_image"
           width="430"
@@ -467,13 +488,20 @@ function ApplicationFeatures() {
             <button className={ourAppStyles.appFeature_btn}>
               See more
               <div className={ourAppStyles.appFeature_btn_circle}>
-                <FontAwesomeIcon icon={faArrowRight} />
+                <Image
+                  priority
+                  src="/fa_right_arrow.png"
+                  alt="/fa_right_arrow image"
+                  width="15"
+                  height="15"
+                />
               </div>
             </button>
           </div>
         </div>
         <div className={ourAppStyles.appFeature_1_frame}>
           <Image
+            priority
             src="/our_app_feature_1.png"
             alt="our_app_feature_1 Image"
             width="534"
@@ -506,13 +534,20 @@ function ApplicationFeatures() {
             <button className={ourAppStyles.appFeature_btn}>
               See more
               <div className={ourAppStyles.appFeature_btn_circle}>
-                <FontAwesomeIcon icon={faArrowRight} />
+                <Image
+                  priority
+                  src="/fa_right_arrow.png"
+                  alt="/fa_right_arrow image"
+                  width="15"
+                  height="15"
+                />
               </div>
             </button>
           </div>
         </div>
         <div className={ourAppStyles.appFeature_2_frame}>
           <Image
+            priority
             src="/our_app_feature_2.png"
             alt="our_app_feature_2 Image"
             width="640"
@@ -547,13 +582,20 @@ function ApplicationFeatures() {
             <button className={ourAppStyles.appFeature_btn}>
               See more
               <div className={ourAppStyles.appFeature_btn_circle}>
-                <FontAwesomeIcon icon={faArrowRight} />
+                <Image
+                  priority
+                  src="/fa_right_arrow.png"
+                  alt="/fa_right_arrow image"
+                  width="15"
+                  height="15"
+                />
               </div>
             </button>
           </div>
         </div>
         <div className={ourAppStyles.appFeature_1_frame}>
           <Image
+            priority
             src="/our_app_feature_3.png"
             alt="our_app_feature_3 Image"
             width="534"
@@ -578,6 +620,7 @@ function AppCosmos() {
       </div>
       <div className={ourAppStyles.appCosmos_ourApp_1}>
         <Image
+          priority
           src="/ourApp_1.png"
           height="540"
           width="700"
@@ -588,127 +631,155 @@ function AppCosmos() {
   );
 }
 
-function Benefits() {
+// --------------------------------------------------------------------------------------------------
+
+function BenefitContentBtn({ screen, i, setCurrImg, prev, prevImgRef }) {
+  const {
+    ref,
+    inView: isVisible,
+    entry,
+  } = useInView({
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.6,
+  });
+
+  useEffect(() => {
+    // setPrevImg(prev);
+    prevImgRef.current = prev;
+    setCurrImg(i);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isVisible]);
+
+  const { extraStyle, benefits_helperText_2, benefits_helperText_1_3 } = screen;
+
   return (
-    <>
-      <div className={benefitStyles.benefits_container}>
-        {/* ---------------- 1 --------------------- */}
-        <div className={benefitStyles.benefits_frame_content}>
-          <div className={benefitStyles.benefits_content_btn}>
-            <div className={benefitStyles.benefits_content}>
-              <div className={benefitStyles.benefits_helperText_1}>
-                AUTOMATION
-              </div>
-              <div className={benefitStyles.benefits_helperText_2}>
-                <p>
-                  Upgrade your <span>home.</span>
-                </p>
-              </div>
-              <div className={benefitStyles.benefits_helperText_1_3}>
-                Smi-Fi can connects with multiple appliances and convert them
-                into smart appliances.
-              </div>
+    <div
+      className={`${benefitScrollStyles.screen_text} ${
+        isVisible && benefitScrollStyles.text_visible
+      }`}
+      ref={ref}
+    >
+      <>
+        <div className={benefitStyles.benefits_content_btn}>
+          <div className={benefitStyles.benefits_content}>
+            <div
+              className={`${benefitStyles.benefits_helperText_1} 
+              ${extraStyle && benefitStyles.benefits_helperText_1_extra}`}
+            >
+              AUTOMATION
             </div>
-            <div className={benefitStyles.benefits_btn_box}>
-              <button className={benefitStyles.benefits_btn}>
-                See the Magic of Smi-Fi
-                <FontAwesomeIcon icon={faArrowRight} />
-              </button>
+            <div
+              className={`${benefitStyles.benefits_helperText_2} 
+              ${extraStyle && benefitStyles.benefits_helperText_2_extra}`}
+            >
+              <p>
+                Upgrade your <span>{benefits_helperText_2}</span>
+              </p>
             </div>
-          </div>
-          <div className={benefitStyles.benefits_img}>
-            <Image
-              src="/benefits_frame_1.png"
-              alt="benefits_frame_1 image"
-              width="720"
-              height="691"
-            />
-          </div>
-        </div>
-        {/* 2 */}
-        <div className={benefitStyles.benefits_frame_content}>
-          <div className={benefitStyles.benefits_content_btn_diff}>
-            <div className={benefitStyles.benefits_content_diff}>
-              <div
-                className={benefitStyles.benefits_helperText_1}
-                style={{ marginBottom: "20px" }}
-              >
-                AUTOMATION
-              </div>
-              <div
-                className={benefitStyles.benefits_helperText_2}
-                style={{ marginBottom: "25px" }}
-              >
-                <p>
-                  Upgrade your <span>lifestyle.</span>
-                </p>
-              </div>
-              <div
-                className={benefitStyles.benefits_helperText_1_3}
-                style={{ marginBottom: "25px" }}
-              >
-                Use voice command or mobile phone to turn ON/OFF all your
-                appliances from anywhere anytime. Schedule timer for appliances.
-              </div>
+            <div
+              className={`${benefitStyles.benefits_helperText_1_3} 
+              ${extraStyle && benefitStyles.benefits_helperText_1_3_extra}`}
+            >
+              {benefits_helperText_1_3}
+            </div>
+            {extraStyle && (
               <div className={benefitStyles.benefits_alexa_img}>
                 <Image
+                  priority
                   src="/Alexa_google.png"
                   alt="Alexa_google.png image"
                   width="214"
                   height="80"
                 />
               </div>
-            </div>
-            <div
-              className={benefitStyles.benefits_btn_box}
-              style={{ marginTop: "0px" }}
-            >
-              <button className={benefitStyles.benefits_btn}>
-                See the Magic of Smi-Fi
-                <FontAwesomeIcon icon={faArrowRight} />
-              </button>
-            </div>
+            )}
           </div>
-          <div className={benefitStyles.benefits_img}>
-            <Image
-              src="/benefits_frame_2.png"
-              alt="benefits_frame_2 image"
-              width="720"
-              height="691"
-            />
+          <div className={benefitStyles.benefits_btn_box}>
+            <button className={benefitStyles.benefits_btn}>
+              See the Magic of Smi-Fi
+              <Image
+                priority
+                src="/fa_right_arrow.png"
+                alt="/fa_right_arrow image"
+                width="15"
+                height="15"
+              />
+            </button>
           </div>
         </div>
-        {/* 3 */}
-        <div className={benefitStyles.benefits_frame_content}>
-          <div className={benefitStyles.benefits_content_btn}>
-            <div className={benefitStyles.benefits_content}>
-              <div className={benefitStyles.benefits_helperText_1}>
-                AUTOMATION
+      </>
+    </div>
+  );
+}
+
+function Benefits() {
+  const [currImg, setCurrImg] = useState(0);
+  const prevImg = useRef(0);
+  // const [prevImg, setPrevImg] = useState(currImg);
+  const [fadeOut, setFadeOut] = useState(false);
+
+  useEffect(() => {
+    setFadeOut(true);
+    setFadeOut(false);
+  }, []);
+
+  return (
+    <>
+      <div className={benefitStyles.mobileScroll}>
+        <div className={benefitStyles.mobileScroll_content_wrapper}>
+          {benefits_scrollData.map((screen, i) => {
+            return (
+              <div
+                className={benefitStyles.mobileScroll_fullScreen}
+                key={screen.benefits_img}
+              >
+                <BenefitContentBtn
+                  screen={screen}
+                  i={i}
+                  setCurrImg={setCurrImg}
+                  prev={currImg}
+                  prevImgRef={prevImg}
+                  // setPrevImg={setPrevImg}
+                />
               </div>
-              <div className={benefitStyles.benefits_helperText_2}>
-                <p>
-                  Upgrade your <span>savings.</span>
-                </p>
-              </div>
-              <div className={benefitStyles.benefits_helperText_1_3}>
-                Get alerts on unattended appliances or unhealthy appliances and
-                control it with your phone.
-              </div>
+            );
+          })}
+        </div>
+        <div className={benefitStyles.mobile_mockup_wrapper}>
+          <div className={benefitStyles.mobile_mockup}>
+            <div className={benefitStyles.mobile_mockup_screen}>
+              <Image
+                priority
+                className={`
+                  ${
+                    prevImg.current === 0
+                      ? benefitScrollStyles.fade_out1
+                      : prevImg.current === 1
+                      ? benefitScrollStyles.fade_out2
+                      : benefitScrollStyles.fade_out3
+                  } `}
+                src={`/benefits_frame_${prevImg.current + 1}.png`}
+                alt={prevImg.current + "image"}
+                width="720"
+                height="691"
+              />
+              <Image
+                priority
+                className={`
+                  ${
+                    currImg === 0
+                      ? benefitScrollStyles.fade_in1
+                      : currImg === 1
+                      ? benefitScrollStyles.fade_in2
+                      : benefitScrollStyles.fade_in3
+                  } `}
+                src={`/benefits_frame_${currImg + 1}.png`}
+                alt={currImg + "image"}
+                width="720"
+                height="691"
+              />
             </div>
-            <div className={benefitStyles.benefits_btn_box}>
-              <button className={benefitStyles.benefits_btn}>
-                See the Magic of Smi-Fi
-                <FontAwesomeIcon icon={faArrowRight} />
-              </button>
-            </div>
-          </div>
-          <div className={benefitStyles.benefits_img}>
-            <Image
-              src="/benefits_frame_3.png"
-              alt="benefits_frame_3 image"
-              width="720"
-              height="691"
-            />
           </div>
         </div>
       </div>
@@ -716,14 +787,32 @@ function Benefits() {
   );
 }
 
+// --------------------------------------------------------------------------------------------------
+
 // Helper Text "unlock superpower"
 function HelperTextSuperpower() {
+  // const [outofView, setOutOfView] = useState(false);
+  const {
+    ref,
+    inView: isVisible,
+    entry,
+  } = useInView({
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.6,
+  });
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isVisible]);
+
   return (
     <>
-      <div className={styles.superpower_container}>
+      <div className={styles.superpower_container} ref={ref}>
         <div className={styles.superpower_designImg_text}>
           <div className={styles.superpower_imgLeft}>
             <Image
+              priority
               src="/design_dots.png"
               alt="left_side_design"
               width="170"
@@ -742,6 +831,7 @@ function HelperTextSuperpower() {
           </div>
           <div className={styles.superpower_imgRight}>
             <Image
+              priority
               src="/design_dots.png"
               alt="right_side_design"
               width="170"
@@ -749,9 +839,16 @@ function HelperTextSuperpower() {
             />
           </div>
         </div>
-        <div className={styles.superpower_smifi_image_box}>
-          <div className={styles.superpower_smifi_image}>
+        {/* <div className={styles.superpower_smifi_image_box} ref={ref}>
+          <div
+            className={`${styles.superpower_smifi_image} ${
+              isVisible
+                ? superpowerScroll.fade_in_bottom
+                : superpowerScroll.slide_out_blurred_br
+            } `}
+          >
             <Image
+              priority
               src="/Smi-Fi_box_front_1.png"
               alt="Smifi device Image"
               layout="fill"
@@ -760,7 +857,7 @@ function HelperTextSuperpower() {
               // height="435"
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );
@@ -774,6 +871,7 @@ function Features() {
         <div className={styles.features_frame}>
           <div className={styles.features_frame1_img}>
             <Image
+              priority
               src="/features_frame1.png"
               width="262"
               height="210"
@@ -788,6 +886,7 @@ function Features() {
         <div className={styles.features_frame}>
           <div className={styles.features_frame2_img}>
             <Image
+              priority
               src="/features_frame2.png"
               width="204"
               height="210"
@@ -802,6 +901,7 @@ function Features() {
         <div className={styles.features_frame}>
           <div className={styles.features_frame3_img}>
             <Image
+              priority
               src="/features_frame3.png"
               width="230"
               height="210"
@@ -830,9 +930,12 @@ function GetSmifi() {
                 YOUR HOME ENERGY ASSISTANT
               </div>
               <div className={styles.getSmifi_smarterHomes}>
-                <p>
-                  Smi-Fi makes your Home <span>Smarter.</span>
-                </p>
+                Smi-Fi makes your Home{" "}
+                <div className={styles.getSmifi_smarterHomes_allTexts}>
+                  <span>Smarter</span>
+                  <span>Safer</span>
+                  <span>Energy Conscious</span>
+                </div>
               </div>
             </div>
             <div className={styles.supportText}>
@@ -842,10 +945,17 @@ function GetSmifi() {
           <div className={styles.getSmifi_action}>
             <button id={styles.getSmifi_btn}>
               Get Smi-Fi
-              <FontAwesomeIcon icon={faArrowRight} />
+              <Image
+                priority
+                src="/fa_right_arrow.png"
+                alt="/fa_right_arrow image"
+                width="15"
+                height="15"
+              />
             </button>
             <div className={styles.getSmifi_rating}>
               <Image
+                priority
                 width="120"
                 height="24"
                 src="/Rating.png"
@@ -859,6 +969,7 @@ function GetSmifi() {
         </div>
         <div className={styles.getSmifi_mobileApp_device}>
           <Image
+            priority
             src="/Picture4 _1.png"
             alt="Smi-fi and App"
             layout="fill"

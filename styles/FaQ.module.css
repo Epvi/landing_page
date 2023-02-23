@@ -122,6 +122,11 @@
   background: #f3f4f6;
   border-radius: 8px;
 }
+.faq_ask_help_center_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 /* ---------- Accordion -------- */
 .faq_accordion {

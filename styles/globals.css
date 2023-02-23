@@ -15,9 +15,14 @@
 /*
   3. Allow percentage-based heights in the application
 */
-html,
+html {
+  height: 100vh;
+  margin: 0px !important;
+}
+
 body {
-  height: 100%;
+  /* background: #000; */
+  height: auto;
   margin: 0px !important;
 }
 /*
@@ -33,7 +38,7 @@ body {
 html,
 body {
   max-width: 100%;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 /*
   6. Improve media defaults
