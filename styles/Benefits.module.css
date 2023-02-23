@@ -1,10 +1,9 @@
-/* ====================== Benefits ============================ */
 .mobileScroll {
   position: relative;
   display: flex;
   justify-content: space-between;
   max-width: 100%;
-  margin-top: 200px;
+  /* margin-top: 200px; */
   height: fit-content;
 }
 
@@ -20,6 +19,7 @@
 
 .mobileScroll_fullScreen {
   min-height: 100vh;
+  /* min-height: 90vh; */
   display: flex;
   justify-content: center;
   flex-direction: column;

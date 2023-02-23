@@ -1,5 +1,5 @@
 import Image from "next/legacy/image";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 // import Image from "next/image";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
@@ -28,13 +28,13 @@ export default function Home() {
         <GetSmifi />
         <Features />
         <HelperTextSuperpower />
+        <AppleComponent frameCount={205} url={'/Layer205_1158x770/Layer '}/>
         <Benefits />
         <AppCosmos />
         <ApplicationFeatures />
         <Safety />
         <SafetyFeatures />
 
-        <AppleComponent />
         <AssociationCompanies />
         <VideoBox />
         <HappySmifiUsers />
@@ -633,7 +633,7 @@ function AppCosmos() {
 
 // --------------------------------------------------------------------------------------------------
 
-function BenefitContentBtn({ screen, prev, setPrevImg, setCurrImg, i }) {
+function BenefitContentBtn({ screen, i, setCurrImg, prev, prevImgRef }) {
   const {
     ref,
     inView: isVisible,
@@ -645,7 +645,8 @@ function BenefitContentBtn({ screen, prev, setPrevImg, setCurrImg, i }) {
   });
 
   useEffect(() => {
-    setPrevImg(prev);
+    // setPrevImg(prev);
+    prevImgRef.current = prev;
     setCurrImg(i);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isVisible]);
@@ -655,7 +656,7 @@ function BenefitContentBtn({ screen, prev, setPrevImg, setCurrImg, i }) {
   return (
     <div
       className={`${benefitScrollStyles.screen_text} ${
-        isVisible ? benefitScrollStyles.text_visible : ""
+        isVisible && benefitScrollStyles.text_visible
       }`}
       ref={ref}
     >
@@ -714,13 +715,15 @@ function BenefitContentBtn({ screen, prev, setPrevImg, setCurrImg, i }) {
 
 function Benefits() {
   const [currImg, setCurrImg] = useState(0);
-  const [prevImg, setPrevImg] = useState(currImg);
+  const prevImg = useRef(0);
+  // const [prevImg, setPrevImg] = useState(currImg);
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
     setFadeOut(true);
     setFadeOut(false);
   }, []);
+
   return (
     <>
       <div className={benefitStyles.mobileScroll}>
@@ -734,9 +737,10 @@ function Benefits() {
                 <BenefitContentBtn
                   screen={screen}
                   i={i}
-                  prev={currImg}
                   setCurrImg={setCurrImg}
-                  setPrevImg={setPrevImg}
+                  prev={currImg}
+                  prevImgRef={prevImg}
+                  // setPrevImg={setPrevImg}
                 />
               </div>
             );
@@ -749,14 +753,14 @@ function Benefits() {
                 priority
                 className={`
                   ${
-                    prevImg === 0
+                    prevImg.current === 0
                       ? benefitScrollStyles.fade_out1
-                      : prevImg === 1
+                      : prevImg.current === 1
                       ? benefitScrollStyles.fade_out2
                       : benefitScrollStyles.fade_out3
                   } `}
-                src={`/benefits_frame_${prevImg + 1}.png`}
-                alt={prevImg + "image"}
+                src={`/benefits_frame_${prevImg.current + 1}.png`}
+                alt={prevImg.current + "image"}
                 width="720"
                 height="691"
               />
@@ -835,7 +839,7 @@ function HelperTextSuperpower() {
             />
           </div>
         </div>
-        <div className={styles.superpower_smifi_image_box} ref={ref}>
+        {/* <div className={styles.superpower_smifi_image_box} ref={ref}>
           <div
             className={`${styles.superpower_smifi_image} ${
               isVisible
@@ -853,7 +857,7 @@ function HelperTextSuperpower() {
               // height="435"
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

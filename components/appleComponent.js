@@ -1,21 +1,8 @@
 import { useEffect } from "react";
 
-const currentFrame = (index) =>
-  `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index
-    .toString()
-    .padStart(4, "0")}.jpg`;
-
-const frameCount = 148;
-
-const preloadImages = () => {
-  for (let i = 1; i < frameCount; i++) {
-    const img = new Image();
-    img.src = currentFrame(i);
-  }
-};
-export default function AppleComponent() {
+export default function AppleComponent({ frameCount, url }) {
   useEffect(() => {
-    preloadImages();
+    preloadImages(frameCount, url);
     const canvas = document.getElementById("canvas");
     const html = document.getElementById("html");
     const body = document.getElementById("body");
@@ -24,35 +11,29 @@ export default function AppleComponent() {
     canvas.width = 1158;
     canvas.height = 770;
     const img = new Image();
-    img.src = currentFrame(1);
+    img.src = currentFrame(1, url);
 
     img.onload = function () {
       context.drawImage(img, 0, 0);
     };
 
     const updateImage = (index) => {
-      img.src = currentFrame(index);
+      img.src = currentFrame(index, url);
       context.drawImage(img, 0, 0);
     };
 
-    window.addEventListener("scroll", () => {
+    window.addEventListener("scroll", (event) => {
       const scrollTopElement = html.offsetTop;
       const scrollHeightElement = html.offsetHeight;
 
       const scrollTopWindow = window.document.documentElement.scrollTop;
-      const scrollHeightWindow = window.document.documentElement.scrollHeight;
 
       const animationStart = scrollTopWindow - scrollTopElement;
 
-      console.log(scrollTopWindow - scrollTopElement);
-      //   if (scrollTopWindow >= scrollTopElement) {
       if (animationStart >= 0) {
-        // const maxScrollTop = scrollHeightWindow - window.innerHeight;
-        const maxScrollTop = scrollHeightWindow - window.innerHeight;
-        // const scrollFraction = scrollTopWindow / maxScrollTop;
+        const maxScrollTop = scrollHeightElement - window.innerHeight;
         const scrollFraction = animationStart / maxScrollTop;
 
-        console.log(html.offsetTop, html.offsetHeight);
         const frameIndex = Math.min(
           frameCount - 1,
           Math.floor(scrollFraction * frameCount)
@@ -71,3 +52,12 @@ export default function AppleComponent() {
     </div>
   );
 }
+
+const currentFrame = (index, url) => `${url}${index}.png`;
+
+const preloadImages = (frameCount, url) => {
+  for (let i = 1; i <= frameCount; i++) {
+    const img = new Image();
+    img.src = currentFrame(i, url);
+  }
+};
