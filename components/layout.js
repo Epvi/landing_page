@@ -25,7 +25,7 @@ export const Navbar = () => {
           <Link href="">Our App</Link>
           <Link href="">FAQ</Link>
           <Link href="/Blog">Blogs</Link>
-          <Link href="">About</Link>
+          <Link href="/about-us">About</Link>
         </div>
         <div className={styles.navActions}>
           <button id={styles.btn1}>Contact Us</button>
