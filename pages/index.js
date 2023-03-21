@@ -101,23 +101,6 @@ export default function Home() {
   );
 }
 
-function ThreePhaseData({ state }) {
-  console.log(state);
-  return (
-    <>
-      <div className={phaseStyle.Info_box_container}>
-        <div className={phaseStyle.red}>Red</div>
-        <div className={phaseStyle.red}> current: {state.current1}</div>
-        <div className={phaseStyle.red}> voltage: {state.voltage1}</div>
-        <div className={phaseStyle.red}>
-          {" "}
-          Power: {state.current1 * state.voltage1}
-        </div>
-      </div>
-    </>
-  );
-}
-
 function ContactUs() {
   return (
     <>
