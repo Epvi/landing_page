@@ -16,7 +16,7 @@ import associatesStyles from "../styles/associates.module.css";
 import smifiUserCardsStyles from "../styles/SmifiUsersCards.module.css";
 import FaQStyles from "../styles/FaQ.module.css";
 import contactUsStyles from "../styles/ContactUs.module.css";
-import phaseStyle from "../styles/PhaseStyle.module.css";
+import phaseStyle from "../styles/phaseStyle.module.css";
 
 import GetMeAccordion from "../src/GetMeAccordion";
 import GetContactUsFrom from "../src/contactForm/GetContactUsFrom";
