@@ -22,10 +22,17 @@ import GetMeAccordion from "../src/GetMeAccordion";
 import GetContactUsFrom from "../src/contactForm/GetContactUsFrom";
 
 import { io } from "socket.io-client";
-const socket = io("http://localhost:3001/");
+const socket = io("https://epviapi.in/");
 
 export default function Home() {
   const [socketData, setSocketData] = useState({});
+
+  let current1 = Math.round(socketData.current1) || 0,
+    current2 = Math.round(socketData.current2) || 0,
+    current3 = Math.round(socketData.current3) || 0,
+    voltage1 = Math.round(socketData.voltage1) || 0,
+    voltage2 = Math.round(socketData.voltage2) || 0,
+    voltage3 = Math.round(socketData.voltage3) || 0;
 
   useEffect(() => {
     socket
@@ -53,44 +60,43 @@ export default function Home() {
             <>
               <div className={phaseStyle.Info_box_container}>
                 <div className={phaseStyle.red}>Red</div>
+                <div className={phaseStyle.red}> current: {current1}</div>
+                <div className={phaseStyle.red}> voltage: {voltage1}</div>
                 <div className={phaseStyle.red}>
-                  {" "}
-                  current: {Math.round(socketData.current1)}
-                </div>
-                <div className={phaseStyle.red}>
-                  {" "}
-                  voltage: {Math.round(socketData.voltage1)}
-                </div>
-                <div className={phaseStyle.red}>
-                  Power: {Math.round(socketData.current1 * socketData.voltage1)}
+                  Power: {current1 * voltage1}
                 </div>
               </div>
               <div className={phaseStyle.Info_box_container}>
                 <div className={phaseStyle.red}>Yellow</div>
+                <div className={phaseStyle.red}> current: {current2}</div>
+                <div className={phaseStyle.red}> voltage: {voltage2}</div>
                 <div className={phaseStyle.red}>
-                  {" "}
-                  current: {Math.round(socketData.current2)}
-                </div>
-                <div className={phaseStyle.red}>
-                  {" "}
-                  voltage: {Math.round(socketData.voltage2)}
-                </div>
-                <div className={phaseStyle.red}>
-                  Power: {Math.round(socketData.current2 * socketData.voltage2)}
+                  Power: {current2 * voltage2}
                 </div>
               </div>
               <div className={phaseStyle.Info_box_container}>
                 <div className={phaseStyle.red}>Blue</div>
+                <div className={phaseStyle.red}> current: {current3}</div>
+                <div className={phaseStyle.red}> voltage: {voltage3}</div>
                 <div className={phaseStyle.red}>
-                  {" "}
-                  current: {Math.round(socketData.current3)}
+                  Power: {current3 * voltage3}
+                </div>
+              </div>
+              {/* Total Power */}
+              <div className={phaseStyle.Info_box_container}>
+                <div className={phaseStyle.red}>Total </div>
+                <div className={phaseStyle.red}>
+                  current: {current1 + current2 + current3}
                 </div>
                 <div className={phaseStyle.red}>
                   {" "}
-                  voltage: {Math.round(socketData.voltage3)}
+                  voltage: {voltage1 + voltage2 + voltage3}
                 </div>
                 <div className={phaseStyle.red}>
-                  Power: {Math.round(socketData.current3 * socketData.voltage3)}
+                  Power:{" "}
+                  {current3 * voltage3 +
+                    current2 * voltage2 +
+                    current1 * voltage1}
                 </div>
               </div>
             </>
