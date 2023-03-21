@@ -86,13 +86,6 @@ export default function Home() {
               <div className={phaseStyle.Info_box_container}>
                 <div className={phaseStyle.red}>Total: </div>
                 <div className={phaseStyle.red}>
-                  current: {current1 + current2 + current3}
-                </div>
-                <div className={phaseStyle.red}>
-                  {" "}
-                  voltage: {voltage1 + voltage2 + voltage3}
-                </div>
-                <div className={phaseStyle.red}>
                   Power:{" "}
                   {current3 * voltage3 +
                     current2 * voltage2 +
