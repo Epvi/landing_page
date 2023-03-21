@@ -59,7 +59,7 @@ export default function Home() {
           {socketData !== {} && (
             <>
               <div className={phaseStyle.Info_box_container}>
-                <div className={phaseStyle.red}>Red</div>
+                <div className={phaseStyle.red}>Red:</div>
                 <div className={phaseStyle.red}> current: {current1}</div>
                 <div className={phaseStyle.red}> voltage: {voltage1}</div>
                 <div className={phaseStyle.red}>
@@ -67,7 +67,7 @@ export default function Home() {
                 </div>
               </div>
               <div className={phaseStyle.Info_box_container}>
-                <div className={phaseStyle.red}>Yellow</div>
+                <div className={phaseStyle.red}>Yellow: </div>
                 <div className={phaseStyle.red}> current: {current2}</div>
                 <div className={phaseStyle.red}> voltage: {voltage2}</div>
                 <div className={phaseStyle.red}>
@@ -75,7 +75,7 @@ export default function Home() {
                 </div>
               </div>
               <div className={phaseStyle.Info_box_container}>
-                <div className={phaseStyle.red}>Blue</div>
+                <div className={phaseStyle.red}>Blue: </div>
                 <div className={phaseStyle.red}> current: {current3}</div>
                 <div className={phaseStyle.red}> voltage: {voltage3}</div>
                 <div className={phaseStyle.red}>
@@ -84,7 +84,7 @@ export default function Home() {
               </div>
               {/* Total Power */}
               <div className={phaseStyle.Info_box_container}>
-                <div className={phaseStyle.red}>Total </div>
+                <div className={phaseStyle.red}>Total: </div>
                 <div className={phaseStyle.red}>
                   current: {current1 + current2 + current3}
                 </div>
