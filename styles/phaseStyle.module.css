@@ -1,0 +1,42 @@
+.device_status_container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 1440px;
+}
+
+.heading {
+  margin: auto;
+  /* width: 957px; */
+  height: 58px;
+
+  font-family: system-ui;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+
+  text-align: center;
+
+  color: #162637;
+  margin-bottom: 50px;
+}
+
+.statesList {
+  margin: auto;
+  /* border: outset gray; */
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  overflow: auto;
+  width: 90%;
+  /* height: 50vh; */
+}
+
+.Info_box_container {
+  display: flex;
+  justify-content: space-between;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 20px;
+}

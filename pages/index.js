@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import Image from "next/legacy/image";
 // import Image from "next/image";
 import Link from "next/link";
@@ -15,27 +16,103 @@ import associatesStyles from "../styles/associates.module.css";
 import smifiUserCardsStyles from "../styles/SmifiUsersCards.module.css";
 import FaQStyles from "../styles/FaQ.module.css";
 import contactUsStyles from "../styles/ContactUs.module.css";
+import phaseStyle from "../styles/PhaseStyle.module.css";
 
 import GetMeAccordion from "../src/GetMeAccordion";
 import GetContactUsFrom from "../src/contactForm/GetContactUsFrom";
 
+import { io } from "socket.io-client";
+const socket = io("http://localhost:3001/");
+
 export default function Home() {
+  const [socketData, setSocketData] = useState({});
+
+  useEffect(() => {
+    socket
+      .on("broadcast", (parameter) => {
+        console.log("Response Message", parameter);
+        const obj = JSON.parse(parameter);
+        setSocketData(obj);
+      })
+      .on("disconnect", (reason) => {
+        console.log("A user disconnected");
+        console.log(`Disconnected. Reason: ${reason}`);
+        setIsError(true);
+        setErrorMessage(`Disconnected. Reason: ${reason}`);
+      });
+  }, [socketData]);
+
+  // console.log("Hello world", socketData);
+
   return (
     <>
-      <div className={styles.main}>
-        <GetSmifi />
-        <Features />
-        <HelperTextSuperpower />
-        <Benefits />
-        <AppCosmos />
-        <ApplicationFeatures />
-        <Safety />
-        <SafetyFeatures />
-        <AssociationCompanies />
-        <VideoBox />
-        <HappySmifiUsers />
-        <FaQ />
-        <ContactUs />
+      <div className={phaseStyle.device_status_container}>
+        <div className={phaseStyle.heading}>Device live Status</div>
+        <div className={phaseStyle.statesList}>
+          {socketData !== {} && (
+            <>
+              <div className={phaseStyle.Info_box_container}>
+                <div className={phaseStyle.red}>Red</div>
+                <div className={phaseStyle.red}>
+                  {" "}
+                  current: {Math.round(socketData.current1)}
+                </div>
+                <div className={phaseStyle.red}>
+                  {" "}
+                  voltage: {Math.round(socketData.voltage1)}
+                </div>
+                <div className={phaseStyle.red}>
+                  Power: {Math.round(socketData.current1 * socketData.voltage1)}
+                </div>
+              </div>
+              <div className={phaseStyle.Info_box_container}>
+                <div className={phaseStyle.red}>Yellow</div>
+                <div className={phaseStyle.red}>
+                  {" "}
+                  current: {Math.round(socketData.current2)}
+                </div>
+                <div className={phaseStyle.red}>
+                  {" "}
+                  voltage: {Math.round(socketData.voltage2)}
+                </div>
+                <div className={phaseStyle.red}>
+                  Power: {Math.round(socketData.current2 * socketData.voltage2)}
+                </div>
+              </div>
+              <div className={phaseStyle.Info_box_container}>
+                <div className={phaseStyle.red}>Blue</div>
+                <div className={phaseStyle.red}>
+                  {" "}
+                  current: {Math.round(socketData.current3)}
+                </div>
+                <div className={phaseStyle.red}>
+                  {" "}
+                  voltage: {Math.round(socketData.voltage3)}
+                </div>
+                <div className={phaseStyle.red}>
+                  Power: {Math.round(socketData.current3 * socketData.voltage3)}
+                </div>
+              </div>
+            </>
+          )}
+        </div>
+      </div>
+    </>
+  );
+}
+
+function ThreePhaseData({ state }) {
+  console.log(state);
+  return (
+    <>
+      <div className={phaseStyle.Info_box_container}>
+        <div className={phaseStyle.red}>Red</div>
+        <div className={phaseStyle.red}> current: {state.current1}</div>
+        <div className={phaseStyle.red}> voltage: {state.voltage1}</div>
+        <div className={phaseStyle.red}>
+          {" "}
+          Power: {state.current1 * state.voltage1}
+        </div>
       </div>
     </>
   );
@@ -104,7 +181,7 @@ function ContactUs() {
             </div>
             <div className={contactUsStyles.contact_us_details}>
               <div className={contactUsStyles.contact_us_details_img}>
-              <Image
+                <Image
                   src="/details_phone.png"
                   alt="Email Image"
                   width="48"
