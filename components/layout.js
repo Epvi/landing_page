@@ -29,7 +29,7 @@ export const Navbar = () => {
         </div>
         <div className={styles.navLinks}>
           <Link href="/">Our Product</Link>
-          <Link href="/">Our App</Link>
+          <Link href="/our-app">Our App</Link>
           <Link href="/">FAQ</Link>
           <Link href="/Blog">Blogs</Link>
           <Link href="/about-us">About</Link>
