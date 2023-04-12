@@ -1,0 +1,241 @@
+.main {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  height: fit-content;
+}
+.headingSection {
+  width: 88.89%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 32px;
+  margin-top: 96px;
+}
+.headingSection_content {
+  max-width: 800px;
+  min-height: 180px;
+}
+.headingSection_des {
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #377bff;
+}
+.headingSection_head {
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 60px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #101828;
+}
+.headingSection_text {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  color: #475467;
+}
+.headingSection_profile {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
+  margin: auto;
+  margin-top: 40px;
+}
+.headingSection_name {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: #101828;
+}
+.headingSection_date {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #475467;
+}
+.headingSection_img {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 64px;
+}
+.headingSection_imageText {
+  max-width: 800px;
+  min-height: 120px;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #475467;
+  margin-top: 96px;
+}
+
+/* Deatils Page - blofPage */
+.DetailsSection {
+  max-width: 800px;
+  margin: auto;
+}
+.endHrLine {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 33px;
+  margin-bottom: 33px;
+}
+.DetailsSection_heading {
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 38px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+.DetailsSection_content {
+  margin-top: 20px;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #475467;
+}
+.DetailsSection_BlogImage {
+  margin-top: 48px;
+}
+.DetailsSection_BlogImage_support {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #475467;
+  margin-bottom: 48px;
+}
+.DetailsSection_Blog_quote {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+}
+.DetailsSection_Blog_quote_auther {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 12px;
+  width: 800px;
+  margin-top: 32px;
+}
+.DetailsSection_Blog_quote_autherDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 2px;
+
+  width: 720px;
+  height: 50px;
+}
+.DetailsSection_conclusionHeading {
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 38px;
+  color: #101828;
+}
+.DetailsSection_conclusion {
+  padding: 32px;
+  margin-top: 48px;
+  width: 800px;
+  background: #f9fafb;
+  border-radius: 16px;
+}
+/* End box */
+.endBoxForLink {
+  display: flex;
+  justify-content: space-between;
+}
+.endBoxForLink_right {
+  display: flex;
+  gap: 8px;
+
+  width: 417px;
+  height: 24px;
+}
+.endBoxForLink_right div {
+  border-radius: 16px;
+  width: 73px;
+  height: 24px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+}
+.endBoxForLink_right div a {
+  all: unset;
+  cursor: pointer;
+}
+.endBoxForLink_right1 {
+  background: #f0f9ff;
+  color: #026aa2;
+}
+.endBoxForLink_right2 {
+  background: #fdf2fa;
+  color: #c11574;
+}
+.endBoxForLink_right3 {
+  background: #fff1f3;
+  color: #c01048;
+}
+
+.endBoxForLink_left {
+  display: flex;
+  padding: 0px;
+  gap: 12px;
+
+  width: 279px;
+  height: 40px;
+}
+.endBoxForLink_left_copyLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+  cursor: pointer;
+  gap: 8px;
+
+  border: 1px solid #d0d5dd;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+}
+.endBoxForLink_left_copyLinkText {
+  width: 63px;
+  height: 20px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #344054;
+}
+.endBoxForLink_left_copyLinkImg {
+  width: 20px;
+  height: 20px;
+}

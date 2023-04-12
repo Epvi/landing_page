@@ -28,9 +28,9 @@ export const Navbar = () => {
           </Link>
         </div>
         <div className={styles.navLinks}>
-          <Link href="">Our Product</Link>
-          <Link href="">Our App</Link>
-          <Link href="">FAQ</Link>
+          <Link href="/">Our Product</Link>
+          <Link href="/">Our App</Link>
+          <Link href="/">FAQ</Link>
           <Link href="/Blog">Blogs</Link>
           <Link href="/about-us">About</Link>
         </div>

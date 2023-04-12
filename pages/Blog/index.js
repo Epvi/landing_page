@@ -162,7 +162,7 @@ function BlogCardsList() {
 }
 
 function BlogCard({ item }) {
-  const { user, designation, title, body, date } = item;
+  const { user, designation, title, body, date, id } = item;
   return (
     <>
       <div className={cardsStyles.card_container}>
@@ -184,7 +184,7 @@ function BlogCard({ item }) {
                 {title}
               </div>
               <div className={cardsStyles.cards_blogInfo_title_icon}>
-                <Link href="">
+                <Link href={`/Blog/${id}`}>
                   <Image
                     src="/right_up_icon.png"
                     alt="right_up_icon"
