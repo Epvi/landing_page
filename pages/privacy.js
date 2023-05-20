@@ -1,4 +1,4 @@
-import { Link } from "@chakra-ui/react";
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import styles from "../styles/Privacy.module.css";
@@ -116,6 +116,13 @@ const Privacy = () => {
                       tailor-made to Your requirements, and to customize the
                       Platform to make Your experience safer and easier.
                     </span>
+                    <br />
+                    <br />
+                    <span>
+                      &nbsp;To remove your data with EpVi click <Link href="/delete-user">Here</Link>
+                    </span>
+                    <br />
+                    <br />
                     <span>
                       &nbsp;For Our purposes, We collect the minimum &ldquo;
                       <strong>Personal Information</strong>&rdquo; necessary

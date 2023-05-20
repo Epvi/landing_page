@@ -18,14 +18,21 @@ export const Navbar = () => {
     <>
       <div className={styles.navContainer}>
         <div className={styles.logoBlock}>
-          <Image src="/LogoBlock.png" alt="Epvi-Logo" width="95" height="32" />
+          <Link href="/">
+            <Image
+              src="/LogoBlock.png"
+              alt="Epvi-Logo"
+              width="95"
+              height="32"
+            />
+          </Link>
         </div>
         <div className={styles.navLinks}>
-          <Link href="">Our Product</Link>
-          <Link href="">Our App</Link>
-          <Link href="">FAQ</Link>
+          <Link href="/">Our Product</Link>
+          <Link href="/our-app">Our App</Link>
+          <Link href="/">FAQ</Link>
           <Link href="/Blog">Blogs</Link>
-          <Link href="">About</Link>
+          <Link href="/about-us">About</Link>
         </div>
         <div className={styles.navActions}>
           <button id={styles.btn1}>Contact Us</button>
