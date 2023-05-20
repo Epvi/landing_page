@@ -162,7 +162,7 @@ function BlogCardsList() {
 }
 
 function BlogCard({ item }) {
-  const { user, designation, title, body, date, id } = item;
+  const { user, linkedIn, designation, title, body, date, id } = item;
   return (
     <>
       <div className={cardsStyles.card_container}>
@@ -206,7 +206,9 @@ function BlogCard({ item }) {
               />
             </div>
             <div className={cardsStyles.cards_userInfo_name_date}>
-              <div className={cardsStyles.cards_userInfo_name}>{user}</div>
+              <div className={cardsStyles.cards_userInfo_name}>
+                <Link href={linkedIn}>{user}</Link>
+              </div>
               <div className={cardsStyles.cards_userInfos_date}>{date}</div>
             </div>
           </div>
